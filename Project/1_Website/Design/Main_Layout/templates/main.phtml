@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<?=metaData::getInstance()->getMetaData(); ?>
+		||global_css||
+		||local_css||	 	
+		||global_javascript_top||
+		<script type="text/javascript">
+			%%GOOGLE_ANALYTICS%%
+			||local_javascript_top||
+		</script>
+</head>
+<body <?=$this->getIdForPage(); ?>>
+
+		<section id="wrapper">
+			%%HEADER_CONTENT%%
+			
+			<section id="<?=routes::getInstance()->getCurrentTopLevelPageID()?>_container" class="clearfix">
+				%%MAIN_CONTENT%%
+			</section>
+			
+			%%FOOTER_CONTENT%%
+		</section>
+		
+		||dialogues||
+		||global_javascript_bottom||
+		<script type="text/javascript">
+			Cufon.now();
+			||local_javascript_bottom||
+			
+		</script>
+</body>
+</html>

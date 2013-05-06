@@ -1,0 +1,59 @@
+/************************************** FOOTER **************************************/
+@import 'C:/WORKSPACE/starfish/Project/1_Website/Design/Main_Layout/css/global';
+
+footer{
+  width:100%;
+  background:{
+    // color:$darkGray;
+  }
+  color:#FFFFFF;
+  height:49px;
+  section{
+    width:1200px;
+    padding:0 88px;
+    margin:0 auto;
+    
+    ul{
+      float:left;
+      list-style: none;
+      padding:0;
+      margin: 20px 0;
+      li{
+        border-right: 1px solid #ccc;
+        float: left;
+        &.active{
+          a{
+            color: #8CC63F;
+          }
+        }
+        a{
+          font-family: 'Calibri',arial;
+          text-decoration:none;
+          padding: 7px 15px;
+          text-align: center;
+          color: #FFFFFF;
+          display: block;
+          font-size: 1.5em;
+          line-height: 0;
+        }
+        &.last{
+          border:none;
+        }
+      }
+    }
+    
+    
+    aside{
+      a{
+        font-size:0px;
+        &.facebook{
+          position: relative;
+          right: -3px;
+        }
+      }
+    }
+  }
+}
+
+
+
