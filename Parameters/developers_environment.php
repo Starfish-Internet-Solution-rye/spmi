@@ -31,7 +31,7 @@ define('SECONDARY_DOMAIN','2_Enteprise');
 
 switch ($_SERVER['SERVER_NAME'])
 {
-	case "starfish_enterprise":
+	case "spmi-enterprise":
 		define('DOMAIN','2_Enterprise');
 		break;
 	
