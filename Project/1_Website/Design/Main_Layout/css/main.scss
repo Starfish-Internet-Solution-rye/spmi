@@ -1,0 +1,80 @@
+/************************************** MAIN **************************************/
+@import 'C:/WORKSPACE/starfish/Project/1_Website/Design/Main_Layout/css/global';
+
+#wrapper {
+  background-color:#ffffff;
+  section[id*='_container']{
+    min-height: 300px;
+    margin:0 auto;
+    width:1200px;
+    border:1px solid #ccc;
+  }
+}
+
+.imagePreview{
+  background:{
+    repeat:no-repeat;
+    position:center top;
+    size:cover;
+  }
+}
+
+.darkGrayOverlay{
+  @include sprite(100%, 100%, 0, 0, 'no-hover', $darkGrayOverlay);
+  background-repeat:repeat !important;
+}
+.transparentOverlay{
+  @include sprite(100%, 100%, 0, 0, 'no-hover', $transparentOverlay);
+  background-repeat:repeat !important;
+}
+
+a.pageLinks{
+  font-family: 'GEInspira-Bold';
+  background-color:#FFFFFF;
+  border:1px solid $gray;
+  position:absolute;
+  color:$linkGray;
+  font-size:1.4em;
+  padding: 2px;
+  width: 270px;
+  bottom:11px;
+  span{
+    background-color: #EDECEC;
+    display: inline-block;
+    line-height: 14px;
+    padding: 2px;
+    width: 100%;
+  }
+}
+
+
+//** Start of SPRITES ***********************************************************************//
+ 
+.service{
+  @include sprite(77px, 77px, -6px, -5px, 'no-hover', $flatSprites);
+}
+.tools{
+  @include sprite(77px, 77px, -6px, -171px, 'no-hover', $flatSprites);
+}
+.stunningDesign{
+  @include sprite(77px, 77px, -6px, -88px, 'no-hover', $flatSprites);
+}
+.superiorKnowledge{
+  @include sprite(77px, 77px, -6px, -254px, 'no-hover', $flatSprites);
+}
+
+
+.Icon{
+  @include sprite(60px, 60px, -4px, -8px, 'no-hover', $detailedSprites);
+}
+
+.starfishEnterprise{
+  @include background(804px,393px,$starfishEnterprise)
+}
+
+.facebook{
+  @include sprite(49px, 49px, -0px, -0px, 'no-hover', $socialMedia);
+}
+.twitter{
+  @include sprite(49px, 49px, -49px, -0px, 'no-hover', $socialMedia);
+}

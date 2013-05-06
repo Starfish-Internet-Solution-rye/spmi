@@ -1,0 +1,109 @@
+<!-- ******************************		NOTES    ***************************** -->
+<!-- Navigational links are grouped together into how they will be grouped together on the page							--> 
+<!-- Primary Navigation are the most important links of the website 													-->
+<!-- if you dont want the home page link on the primary navigation because its the logo then put it in the SXXDD 		-->
+
+<!-- *******************************	OPTIONS   ****************************************************-->
+<!-- default ="true display default page for website-->
+<!-- language ="en" -->
+<!-- frontend ="hide" if set to page - folder is not required in Design-->
+<!-- cms ="hide" hide page from CMS side navigation-->
+<!-- xml ="default" display default xml page for CMS-->
+<!-- **************************************************************************************************-->
+<pages>
+	<!-- ******************************		Primary Navigation    ************************************ -->
+	<navigation_group>
+		<navigation_group_id>primary</navigation_group_id>
+		<page xml ="default" default="true">
+				<page_id>home</page_id>
+				<url_name>home</url_name>
+				<link_title>HOME</link_title>
+				<link_text>HOME</link_text>
+		</page>
+		<page>
+				<page_id>corporate</page_id>
+				<url_name>corporate-profile</url_name>
+				<link_title>Corporate Profile</link_title>
+				<link_text>Corporate Profile</link_text>
+				<!-- **************************************************************************************************-->
+					<page>
+						<page_id>about</page_id>
+						<url_name>about-spmi</url_name>
+						<link_title>About SPMI</link_title>
+						<link_text>About SPMI</link_text>
+					</page>
+				<!-- **************************************************************************************************-->
+					<page>
+						<page_id>business</page_id>
+						<url_name>business-philosophy</url_name>
+						<link_title>Business Philisophy</link_title>
+						<link_text>Business Philisophy</link_text>
+					</page>
+		</page>
+		<page>
+				<page_id>products</page_id>
+				<url_name>products</url_name>
+				<link_title>Products</link_title>
+				<link_text>Products</link_text>
+				<!-- **************************************************************************************************-->
+					<page>
+						<page_id>fibers</page_id>
+						<url_name>natural-fibers</url_name>
+						<link_title>Natural Fibers</link_title>
+						<link_text>Natural Fibers</link_text>
+					</page>
+		</page>
+		<page>
+				<page_id>applications</page_id>
+				<url_name>applications</url_name>
+				<link_title>Applications</link_title>
+				<link_text>Applications</link_text>
+		</page>
+		<page>
+				<page_id>process</page_id>
+				<url_name>process-and-technology</url_name>
+				<link_title>Process and Technology</link_title>
+				<link_text>Process and Technology</link_text>
+				<!-- **************************************************************************************************-->
+					<page>
+						<page_id>advanced</page_id>
+						<url_name>advanced-german-technology</url_name>
+						<link_title>Advanced German Technology</link_title>
+						<link_text>Advanced German Technology</link_text>
+					</page>
+		</page>
+		<page>
+				<page_id>sustainability</page_id>
+				<url_name>sustainability</url_name>
+				<link_title>Sustainability</link_title>
+				<link_text>Sustainability</link_text>
+				<!-- **************************************************************************************************-->
+					<page>
+						<page_id>commitment</page_id>
+						<url_name>commitment</url_name>
+						<link_title>Commitment</link_title>
+						<link_text>Commitment</link_text>
+					</page>
+				<!-- **************************************************************************************************-->
+					<page>
+						<page_id>quality</page_id>
+						<url_name>quality</url_name>
+						<link_title>Quality</link_title>
+						<link_text>Quality</link_text>
+					</page>
+		</page>
+	</navigation_group>
+	
+	
+	<!-- ******************************		Secondary Navigation    ************************************ -->
+	<navigation_group>
+		<navigation_group_id>secondary</navigation_group_id>
+		<page>
+			<page_id>contact</page_id>
+			<url_name>contact-us</url_name>
+			<link_title>contact us</link_title>
+			<link_text>contact us</link_text>
+		</page>
+	</navigation_group>
+</pages>
+<!-- **************************************************************************************************-->

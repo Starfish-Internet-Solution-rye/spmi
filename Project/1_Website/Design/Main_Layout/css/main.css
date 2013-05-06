@@ -1,0 +1,100 @@
+/************************************** MAIN **************************************/
+.sprite, .darkGrayOverlay, .transparentOverlay, .service, .tools, .stunningDesign, .superiorKnowledge, .Icon, .facebook, .twitter {
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-color: transparent; }
+
+#wrapper {
+  background-color: #ffffff; }
+  #wrapper section[id*='_container'] {
+    min-height: 300px;
+    margin: 0 auto;
+    width: 1200px;
+    border: 1px solid #ccc; }
+
+.imagePreview {
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover; }
+
+.darkGrayOverlay {
+  width: 100% !important;
+  height: 100% !important;
+  background-position: 0 0;
+  background-image: url("/Project/1_Website/Design/Main_Layout/images/backgrounds/darkGray-overlay.png");
+  background-repeat: repeat !important; }
+
+.transparentOverlay {
+  width: 100% !important;
+  height: 100% !important;
+  background-position: 0 0;
+  background-image: url("/Project/1_Website/Design/Main_Layout/images/backgrounds/transparent-overlay.png");
+  background-repeat: repeat !important; }
+
+a.pageLinks {
+  font-family: 'GEInspira-Bold';
+  background-color: #FFFFFF;
+  border: 1px solid #939597;
+  position: absolute;
+  color: #58585b;
+  font-size: 1.4em;
+  padding: 2px;
+  width: 270px;
+  bottom: 11px; }
+  a.pageLinks span {
+    background-color: #EDECEC;
+    display: inline-block;
+    line-height: 14px;
+    padding: 2px;
+    width: 100%; }
+
+.service {
+  width: 77px !important;
+  height: 77px !important;
+  background-position: -6px -5px;
+  background-image: url("/Project/1_Website/Design/Main_Layout/images/sprites/flat-sprites.png"); }
+
+.tools {
+  width: 77px !important;
+  height: 77px !important;
+  background-position: -6px -171px;
+  background-image: url("/Project/1_Website/Design/Main_Layout/images/sprites/flat-sprites.png"); }
+
+.stunningDesign {
+  width: 77px !important;
+  height: 77px !important;
+  background-position: -6px -88px;
+  background-image: url("/Project/1_Website/Design/Main_Layout/images/sprites/flat-sprites.png"); }
+
+.superiorKnowledge {
+  width: 77px !important;
+  height: 77px !important;
+  background-position: -6px -254px;
+  background-image: url("/Project/1_Website/Design/Main_Layout/images/sprites/flat-sprites.png"); }
+
+.Icon {
+  width: 60px !important;
+  height: 60px !important;
+  background-position: -4px -8px;
+  background-image: url("/Project/1_Website/Design/Main_Layout/images/sprites/detailed-sprites.png"); }
+
+.starfishEnterprise {
+  display: inline-block;
+  width: 804px;
+  height: 393px;
+  background-image: url("/Project/1_Website/Design/Main_Layout/images/backgrounds/starfish-enterprise.png");
+  background-repeat: no-repeat; }
+
+.facebook {
+  width: 49px !important;
+  height: 49px !important;
+  background-position: 0px 0px;
+  background-image: url("/Project/1_Website/Design/Main_Layout/images/sprites/social-media.png"); }
+
+.twitter {
+  width: 49px !important;
+  height: 49px !important;
+  background-position: -49px 0px;
+  background-image: url("/Project/1_Website/Design/Main_Layout/images/sprites/social-media.png"); }
