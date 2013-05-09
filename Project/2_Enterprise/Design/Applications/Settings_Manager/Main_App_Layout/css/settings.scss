@@ -33,20 +33,26 @@
     border-radius:0;
     padding:0 5px;
     font-size:12px;
-    &[name="siteVerification"]{
-      width: 805px;
-    }
+    
   }
   input.sprite{
     background-position: -904px -40px;
     height: 31px;
     width: 81px;
   }
-  textarea[name="g_analytics"] {
-    width: 805px;
-    border-radius:0;
-    font-size:12px;
-    padding:10px !important;
+  textarea{
+    &[name="g_analytics"] {
+      width: 805px;
+      border-radius:0;
+      font-size:12px;
+      padding:10px !important;
+      
+    }
+    &[name="googleVerification"]{
+      width: 805px;
+      padding:0 5px;
+      max-height:25px;
+    }
   }
   #smtp{
     > div:first-child{

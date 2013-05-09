@@ -1,8 +1,6 @@
 Array
 (
-    [0] => Parameters Array - array(1) {
-  [0]=>
-  string(21) "photo_chooser_details"
+    [0] => Parameters Array - array(0) {
 }
 
 )

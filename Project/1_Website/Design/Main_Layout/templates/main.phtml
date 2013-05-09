@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">  
+<!--[if IE 9]><html class="no-js ie9" xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><![endif]-->
+<!--[if !IE]><!--><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><!--<![endif]-->
 <html>
 <head>
 	<?=metaData::getInstance()->getMetaData(); ?>
@@ -7,25 +10,26 @@
 		||global_javascript_top||
 		<script type="text/javascript">
 			%%GOOGLE_ANALYTICS%%
+			Cufon.now();
 			||local_javascript_top||
 		</script>
 </head>
 <body <?=$this->getIdForPage(); ?>>
-
-		<section id="wrapper">
+		<!--[if lt IE 8]><p class="chromeframe btn btn-inverse">"Your version of Internet Explorer is not supported by this website. <a href="http://browsehappy.com/" target="blank" class="btn btn-info">We recommend Firefox.</a> or <a href="http://www.google.com/chromeframe/?redirect=true"  target="blank" class="btn btn-info">install Google Chrome Frame</a>.  Thank you!</p><![endif]-->
+		<div id="wrapper">
 			%%HEADER_CONTENT%%
 			
-			<section id="<?=routes::getInstance()->getCurrentTopLevelPageID()?>_container" class="clearfix">
+			<div id="<?=routes::getInstance()->getCurrentTopLevelPageID()?>_container" class="clearfix">
 				%%MAIN_CONTENT%%
-			</section>
+			</div>
 			
 			%%FOOTER_CONTENT%%
-		</section>
+		</div>
 		
 		||dialogues||
 		||global_javascript_bottom||
 		<script type="text/javascript">
-			Cufon.now();
+			
 			||local_javascript_bottom||
 			
 		</script>

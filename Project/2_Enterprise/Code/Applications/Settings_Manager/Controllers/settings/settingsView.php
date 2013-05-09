@@ -6,37 +6,36 @@ class settingsView extends applicationsSuperView
 	private $templates_location;
 	private $array_of_results;
 	
+	//-------------------------------------------------------------------------------------------------
+	public function __get($field)
+	{
+		if(property_exists($this, $field)) return $this->{$field};
+	
+		else return NULL;
+	}
+	
+	//-------------------------------------------------------------------------------------------------
+	
+	public function __set($field, $value) {
+		if(property_exists($this, $field)) $this->{$field} = $value;
+	}
+	
+	//-------------------------------------------------------------------------------------------------
+	
 	public function __construct()
 	{
 		$this->templates_location = 'Project/2_Enterprise/Design/Applications/Settings_Manager/Controllers/templates/settings/';
 	}
-	 
-//=================================================================================================
-
-	public function getArrayOfResults() { return $this->array_of_results; }
-	 
-//=================================================================================================
-
-	public function setArrayOfResults($array_of_results) { $this->array_of_results = $array_of_results; }
-	 
+	
 //=================================================================================================
 
 	public function displaySettingsContentColumn()
 	{
-		$this->displaySettingsHeader();
-		
 		$content = $this->renderTemplate($this->templates_location.'settings_content_column.phtml');
 		response::getInstance()->addContentToTree(array('CONTENT_COLUMN'=>$content));
 	}
 	 
 //=================================================================================================
 
-	private function displaySettingsHeader()
-	{
-		$content = $this->renderTemplate($this->templates_location.'settings_header.phtml');
-		response::getInstance()->addContentToTree(array('APPLICATION_HEADER'=>$content));
-	}	
 	 
 }
-
-

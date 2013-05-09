@@ -13,32 +13,28 @@ class settingsController extends applicationsSuperController
 		if(isset($_POST['saveBtn']) == 'Save')
 		{
 			if($_POST['password'] == '' || $_POST['password'] == NULL){
-				$model->setPassword($model->getPassword());
+				$model->__set('password', $model->__get('password'));
 			}
 			else
-				$model->setPassword(sha1(md5($_POST['password'])));
+				$model->__set('password', sha1(md5($_POST['password'])));
 			
-			$model->setUsername($_POST['username']);
-			$model->setHost($_POST['smtp_host']);
-			$model->setSmtpUsername($_POST['smtp_user']);
-			$model->setSmtpPassword($_POST['smtp_pass']);
-			$model->setPort($_POST['smtp_port']);
-			$model->setToEmail($_POST['to_email']);
-			$model->setToName($_POST['to_name']);
-			$model->setToEmail($_POST['to_email'], 'skills');
-			$model->setToName($_POST['to_name'], 'skills');
-			$model->setToEmail($_POST['to_email'], 'innovation');
-			$model->setToName($_POST['to_name'], 'innovation');
-			$model->setSmtpAuth($_POST['smtp_auth']);
-			$model->setUseSmtp($_POST['use_smtp']);
-			$model->setGoogleAnalytics($_POST['g_analytics']);
+			$model->__set('username', $_POST['username']);
+			$model->__set('smtp_host', $_POST['smtp_host']);
+			$model->__set('smtp_user', $_POST['smtp_user']);
+			$model->__set('smtp_pass', $_POST['smtp_pass']);
+			$model->__set('smtp_port', $_POST['smtp_port']);
+			$model->__set('to_email', $_POST['to_email']);
+			$model->__set('to_name', $_POST['to_name']);
+			$model->__set('to_email', $_POST['to_email']);
+			$model->__set('smtp_auth', $_POST['smtp_auth']);
+			$model->__set('use_smtp', $_POST['use_smtp']);
+			$model->__set('google_analytics', $_POST['g_analytics']);
+			$model->__set('google_verification', $_POST['googleVerification']);
 			$model->update();
 		}
 		
 		$view = new settingsView();
-		$view->setArrayOfResults($model);
+		$view->__set('array_of_results', $model);
 		$view->displaySettingsContentColumn();
 	}
 }
-
-
