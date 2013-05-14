@@ -3,9 +3,17 @@
 
 header{
   height: 125px;
-  > a{
-    margin-top: 17px;
-    display:inline-block;
+  >div{
+    a{
+      margin-top: 17px;
+      display:inline-block;
+    }
+    p{
+      font-size: .95em;
+      color:$grey;
+      margin-left: 59px;
+      line-height: 6px;
+    }
   }
   #secondary_nav{
     li{
@@ -21,30 +29,31 @@ header{
     & > li{
       display:inline-table;
       list-style:none;
-      border-right: 1px solid $darkBlue;
       padding-right: 12px;
       &.last{
-        border-right: 0;
+        a{
+          border-right:0;
+        }
       }
       a{
-        line-height: 34px;
-        padding: 0 37px;
+        line-height: 42px;
+        padding: 0 36px;
         font-weight:bold;
         font-size: 1.2em;
+        border-right: 1px solid $darkBlue;
       }
-      ul{
+      >ul{
         margin-top: 0px;
         padding:0;
         li{
           display:none;
-          height: 28px;
           width:100%;
-          line-height: 30px;
           border-bottom: 1px solid grey;
           background-color: #000000;
           opacity:0.8;
           a{
             color:$white;
+            border-right: 0;
             &:hover{
               color:$orange;
             }

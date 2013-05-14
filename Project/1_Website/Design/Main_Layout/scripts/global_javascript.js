@@ -1,5 +1,5 @@
 $(document).ready(function(){
-//	Cufon.replace('header', { fontFamily: 'Avenir LT Std' });
-	
+	Cufon.replace('header p', { fontFamily: 'Franklin Gothic Book' });
+	Cufon.replace('p', { fontFamily: 'Myriad Pro' });
 });
 

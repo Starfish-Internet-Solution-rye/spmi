@@ -1,68 +1,69 @@
-.sprite, #aboutContainer .activePointer {
+.sprite, .lowerPanel #aboutContainer .activePointer {
   border: none;
   display: inline-block;
   vertical-align: middle;
   background-repeat: no-repeat;
   background-color: transparent; }
 
-#slider {
+.upperPanel #slider {
   height: 315px;
   width: 900px; }
 
-.opaqueNav {
-  height: 45px;
-  width: 900px;
-  padding: 12px;
-  background-color: #000000;
-  z-index: 10;
-  top: 395px;
-  opacity: 0.8; }
-  .opaqueNav a {
-    color: white;
-    font-size: 1.8em;
-    margin-right: 34px; }
-
-#aboutContainer .activePointer {
-  position: absolute;
-  top: 420px;
-  z-index: 99;
-  width: 20px !important;
-  height: 20px !important;
-  background-position: -97px 9px;
-  background-image: url("/Project/1_Website/Design/Main_Layout/images/sprites/sprite.png"); }
-#aboutContainer #aboutPointer {
-  margin-left: 50px; }
-#aboutContainer #businessPointer {
-  margin-left: 213px; }
-#aboutContainer .upperContent {
-  background-color: #d0d2d3;
-  height: 331px;
-  padding: 36px 0px 0px 64px; }
-  #aboutContainer .upperContent > h3 {
-    color: #0b53a0;
-    float: left; }
-  #aboutContainer .upperContent > p {
-    float: right;
-    width: 571px;
-    line-height: 19px; }
-  #aboutContainer .upperContent #orangeWrap {
-    left: 0;
-    padding: 35px 0px 0px 30px;
-    width: 428px;
-    height: 172px;
-    background-color: #f47e20;
-    bottom: 18px;
-    padding: 35px 35px 30px 30px; }
-    #aboutContainer .upperContent #orangeWrap > p {
+.lowerPanel {
+  position: relative; }
+  .lowerPanel .opaqueNav {
+    height: 45px;
+    width: 900px;
+    padding: 12px;
+    background-color: #000000;
+    z-index: 10;
+    top: -45px;
+    opacity: 0.8; }
+    .lowerPanel .opaqueNav a {
       color: white;
-      line-height: 20px; }
-  #aboutContainer .upperContent .imgHolder {
-    margin-top: 19px;
-    width: 476px;
-    height: 174px;
-    background-image: url("/Project/1_Website/Design/Main_Layout/images/temporaryImages/aboutImage.png");
-    background-size: contain;
-    background-repeat: no-repeat; }
-  #aboutContainer .upperContent #orangeContent {
-    width: 428px;
-    height: 172px; }
+      font-size: 1.8em;
+      margin-right: 34px; }
+  .lowerPanel #aboutContainer .activePointer {
+    position: absolute;
+    top: -20px;
+    z-index: 99;
+    width: 20px !important;
+    height: 20px !important;
+    background-position: -97px 9px;
+    background-image: url("/Project/1_Website/Design/Main_Layout/images/sprites/sprite.png"); }
+  .lowerPanel #aboutContainer #aboutPointer {
+    margin-left: 50px; }
+  .lowerPanel #aboutContainer #businessPointer {
+    margin-left: 213px; }
+  .lowerPanel #aboutContainer .upperContent {
+    background-color: #d0d2d3;
+    height: 331px;
+    padding: 36px 0px 0px 64px; }
+    .lowerPanel #aboutContainer .upperContent > h3 {
+      color: #0b53a0;
+      float: left; }
+    .lowerPanel #aboutContainer .upperContent > p {
+      float: right;
+      width: 571px;
+      line-height: 19px; }
+    .lowerPanel #aboutContainer .upperContent #orangeWrap {
+      left: 0;
+      padding: 35px 0px 0px 30px;
+      width: 428px;
+      height: 172px;
+      background-color: #f47e20;
+      bottom: 18px;
+      padding: 35px 35px 30px 30px; }
+      .lowerPanel #aboutContainer .upperContent #orangeWrap > p {
+        color: white;
+        line-height: 20px; }
+    .lowerPanel #aboutContainer .upperContent .imgHolder {
+      margin-top: 19px;
+      width: 476px;
+      height: 174px;
+      background-image: url("/Project/1_Website/Design/Main_Layout/images/temporaryImages/aboutImage.png");
+      background-size: contain;
+      background-repeat: no-repeat; }
+    .lowerPanel #aboutContainer .upperContent #orangeContent {
+      width: 428px;
+      height: 172px; }
