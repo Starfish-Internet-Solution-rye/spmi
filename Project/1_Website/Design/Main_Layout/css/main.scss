@@ -1,19 +1,9 @@
 /************************************** MAIN **************************************/
-@import 'C:/WORKSPACE/spmi/Project/1_Website/Design/Main_Layout/css/global';
+@import 'C:/WORKSPACE2/spmi/Project/1_Website/Design/Main_Layout/css/global';
 
 #wrapper {
-  background-color:#ffffff;
-  div[id*='_container']{
-    min-height: 300px;
-    margin:0 auto;
-    width:1200px;
-    border:1px solid #ccc;
-  }
+  background-color:$white;
+  min-height: 300px;
+  margin:0 auto;
+  width: 900px;
 }
-
-
-
-
-//** Start of SPRITES ***********************************************************************//
- 
-

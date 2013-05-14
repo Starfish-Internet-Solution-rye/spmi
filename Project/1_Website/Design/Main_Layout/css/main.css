@@ -1,1 +1,13 @@
-.sprite{border:none;display:inline-block;vertical-align:middle;background-repeat:no-repeat;background-color:transparent}#wrapper{background-color:#ffffff}#wrapper div[id*='_container']{min-height:300px;margin:0 auto;width:1200px;border:1px solid #ccc}
+/************************************** MAIN **************************************/
+.sprite {
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-color: transparent; }
+
+#wrapper {
+  background-color: white;
+  min-height: 300px;
+  margin: 0 auto;
+  width: 900px; }

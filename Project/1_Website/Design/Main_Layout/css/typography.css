@@ -10,7 +10,7 @@
    Typography
    ========================================================================== */
 body {
-  font-family: 'GEInspira',arial,tahoma,verdana,sans-serif;
+  font-family: 'HELVETICALTSTD-ROMAN',arial,tahoma,verdana,sans-serif;
   font-size: 62.5%;
   -webkit-text-size-adjust: 62.5%;
   -ms-text-size-adjust: 62.5%; }
@@ -101,7 +101,7 @@ a abbr, a acronym {
 
 a {
   text-decoration: none;
-  color: #00A99D; }
+  color: #f47e20; }
 
 a:hover {
   text-decoration: none; }
@@ -128,18 +128,16 @@ blockquote *:first-child:after {
 
 p {
   margin: 0 0 9px;
-  font-size: 1.4em;
+  font-size: 1.2em;
   line-height: 27px;
   word-wrap: break-word; }
 
 h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizelegibility;
   font-weight: bold;
-  color: #373837;
   margin: 0; }
 
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-  color: #221f20;
   font-family: 'GEInspira-Bold'; }
 
 h1 {
@@ -494,38 +492,3 @@ h4 small {
 
 .fwN {
   font-weight: normal; }
-
-@font-face {
-  font-family: 'AvenirLTStd-Light';
-  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/avenirltstdlight.eot");
-  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/avenirltstdlight.eot?#iefix") format("embedded-opentype"), url("/Project/1_Website/Design/Main_Layout/css/fonts/avenirltstdlight.woff") format("woff"), url("/Project/1_Website/Design/Main_Layout/css/fonts/avenirltstdlight.ttf") format("truetype"), url("/Project/1_Website/Design/Main_Layout/css/fonts/avenirltstdlight.svg#avenirltstdlight") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'GEInspira';
-  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/geinsprg.eot");
-  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/geinsprg.eot?#iefix") format("embedded-opentype"), url("/Project/1_Website/Design/Main_Layout/css/fonts/geinsprg.woff") format("woff"), url("/Project/1_Website/Design/Main_Layout/css/fonts/geinsprg.ttf") format("truetype"), url("/Project/1_Website/Design/Main_Layout/css/fonts/geinsprg.svg#geinsprg") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'GEInspira-Bold';
-  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/geinspbd.eot");
-  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/geinspbd.eot?#iefix") format("embedded-opentype"), url("/Project/1_Website/Design/Main_Layout/css/fonts/geinspbd.woff") format("woff"), url("/Project/1_Website/Design/Main_Layout/css/fonts/geinspbd.ttf") format("truetype"), url("/Project/1_Website/Design/Main_Layout/css/fonts/geinspbd.svg#geinspbd") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'AvenirLTStd-Roman';
-  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/avenirltstdroman.eot");
-  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/avenirltstdroman.eot?#iefix") format("embedded-opentype"), url("/Project/1_Website/Design/Main_Layout/css/fonts/avenirltstdroman.woff") format("woff"), url("/Project/1_Website/Design/Main_Layout/css/fonts/avenirltstdroman.ttf") format("truetype"), url("/Project/1_Website/Design/Main_Layout/css/fonts/avenirltstdroman.svg#avenirltstdroman") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'HoeflerTitling-HTF-LtRoman';
-  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/hoeflertitlinghtfltroman.eot");
-  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/hoeflertitlinghtfltroman.eot?#iefix") format("embedded-opentype"), url("/Project/1_Website/Design/Main_Layout/css/fonts/hoeflertitlinghtfltroman.woff") format("woff"), url("/Project/1_Website/Design/Main_Layout/css/fonts/hoeflertitlinghtfltroman.ttf") format("truetype"), url("/Project/1_Website/Design/Main_Layout/css/fonts/hoeflertitlinghtfltroman.svg#hoeflertitlinghtfltroman") format("svg");
-  font-weight: normal;
-  font-style: normal; }

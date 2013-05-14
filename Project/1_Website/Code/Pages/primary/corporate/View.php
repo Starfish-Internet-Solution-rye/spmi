@@ -1,1 +1,1 @@
-<?phprequire_once FILE_ACCESS_CORE_CODE.'/Framework/MVC_superClasses_Core/viewSuperClass_Core/viewSuperClass_Core.php';class view extends viewSuperClass_Core{}?>
+<?phprequire_once FILE_ACCESS_CORE_CODE.'/Framework/MVC_superClasses_Core/viewSuperClass_Core/viewSuperClass_Core.php';class view extends viewSuperClass_Core{	public function displaySlider()	{		$content= $this->renderTemplate('/Project/1_Website/Design/Pages/primary/corporate/templates/corporateSlider.phtml');		response::getInstance()->addContentToTree(array('SLIDER'=>$content));	}}?>

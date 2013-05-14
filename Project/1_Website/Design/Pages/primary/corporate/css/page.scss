@@ -1,0 +1,76 @@
+@import 'C:/WORKSPACE2/spmi/Project/1_Website/Design/Main_Layout/css/global';
+// ------------------slider------------------
+#slider{
+  height:315px;
+  width:900px;
+}
+// ---------------------Pages---------------
+.opaqueNav{
+  height:45px;
+  width:900px;
+  padding: 12px;
+  background-color:#000000;
+  z-index: 10;
+  top: 395px;
+  opacity:0.8;
+  a{
+    color:$white;
+    font-size:1.8em;
+    margin-right: 34px;
+  }
+}
+#aboutContainer{
+  .activePointer{
+    position:absolute;
+    top:420px;
+    z-index: 99;
+    @include sprite(20px, 20px, -97px, 9px,$hover:'no-hover',$img:$sprite);
+  }
+  #aboutPointer{
+    margin-left: 50px;
+  }
+  #businessPointer{
+    margin-left:213px;
+  }
+  .upperContent{
+    background-color:$greyBg;
+    height:331px;
+    padding: 36px 0px 0px 64px;
+    >h3{
+      color:$blueHeader;
+      float:left;
+    }
+    >p{//remove if CMS is fixed!
+      float:right;
+      width: 571px;
+      line-height: 19px;
+    }
+    #orangeWrap{
+      left:0;
+      padding:35px 0px 0px 30px;
+      width:428px;
+      height:172px;
+      background-color:$orange;
+      bottom: 18px;
+      padding: 35px 35px 30px 30px;
+      >p{
+        color:$white;
+        line-height:20px;
+      }
+    }
+    .imgHolder{
+      margin-top: 19px;
+      width: 476px;
+      height:174px;
+      background:{
+        image:url('/Project/1_Website/Design/Main_Layout/images/temporaryImages/aboutImage.png');
+        size:contain;
+        repeat:no-repeat;
+      }
+    }
+    #orangeContent{
+    width:428px;
+    height:172px;
+  }
+  }
+}

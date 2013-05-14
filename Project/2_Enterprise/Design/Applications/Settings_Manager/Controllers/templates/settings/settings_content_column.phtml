@@ -1,4 +1,4 @@
-<?$params = $this->__get('array_of_results');?>
+<?$params = $this->getArrayOfResults();?>
 	<form method="POST" class="w100">
 		<div class="clearfix borderTop">
 			<h4>Login Settings</h4>
@@ -6,7 +6,7 @@
 				<div class="mVxl">
 					<div>
 						<span class="fs-m">Admin Username</span><br>
-						<input type="text" name="username" value="<?=$params->__get('username'); ?>" />
+						<input type="text" name="username" value="<?=$params->getUsername(); ?>" />
 					</div>
 					<div class="mTl">
 						<span class="fs-m">Admin Password</span><br>
@@ -20,11 +20,11 @@
 			<div class="mVxl fleft">
 					<div>
 						<span class="fs-m">Email</span><br>
-						<input type="text" name="to_email" value="<?=$params->__get('to_email'); ?>" />
+						<input type="text" name="to_email" value="<?=$params->getToEmail(); ?>" />
 					</div>
 					<div class="mTl">
 						<span class="fs-m">Name</span><br>
-						<input type="text" name="to_name" value="<?=$params->__get('to_name'); ?>" />
+						<input type="text" name="to_name" value="<?=$params->getToName(); ?>" />
 					</div>
 			</div>
 			<div class="mLxxl mVxl fleft">
@@ -32,46 +32,45 @@
 						<div class="fleft">
 							<span class="fs-m">Use SMTP</span><br>
 							<select name="use_smtp">
-								<option value="1" <? if($params->__get('use_smtp') == '1') echo 'selected'; ?>>YES</option>
-								<option value="0" <? if($params->__get('use_smtp') !== '1') echo 'selected'; ?>>NO</option>
+								<option value="1" <? if($params->getUseSmtp() == '1') echo 'selected'; ?>>YES</option>
+								<option value="0" <? if($params->getUseSmtp() !== '1') echo 'selected'; ?>>NO</option>
 							</select>
 						</div>
 						<div class="fleft pLxxl">
 							<span class="fs-m">SMTP Auth</span><br>
 							<select name="smtp_auth">
-								<option value="1" <? if($params->__get('smtp_auth') == '1') echo 'selected'; ?>>YES</option>
-								<option value="0" <? if($params->__get('smtp_auth') !== '1') echo 'selected'; ?>>NO</option>
+								<option value="1" <? if($params->getSmtpAuth() == '1') echo 'selected'; ?>>YES</option>
+								<option value="0" <? if($params->getSmtpAuth() !== '1') echo 'selected'; ?>>NO</option>
 							</select>
 						</div>
 					</div>
 					<div class="mTl">
 						<div class="fleft">
 							<span class="fs-m">SMTP Host</span><br>
-							<input type="text" name="smtp_host" value="<?=$params->__get('host'); ?>"/>
+							<input type="text" name="smtp_host" value="<?=$params->getHost(); ?>"/>
 						</div>
 						<div class="fleft pLxxl">
 							<span class="fs-m">SMTP Username</span><br>
-							<input type="text" name="smtp_user" value="<?=$params->__get('smtp_username'); ?>" />
+							<input type="text" name="smtp_user" value="<?=$params->getSmtpUsername(); ?>" />
 						</div>
 						<div class="clear fleft mTl">
 							<span class="fs-m">SMTP Password</span><br>
-							<input type="text" name="smtp_pass" value="<?=$params->__get('smtp_password'); ?>" />
+							<input type="text" name="smtp_pass" value="<?=$params->getSmtpPassword(); ?>" />
 						</div>
 						<div class="fleft pLxxl mTl">
 							<span class="fs-m">SMTP Port</span><br>
-							<input type="text" name="smtp_port" value="<?=$params->__get('smtp_port'); ?>" />
+							<input type="text" name="smtp_port" value="<?=$params->getPort(); ?>" />
 						</div>
 					</div>
 			</div>
 		</div>
 		<div class="clearfix mTl pBl borderTop">
-		<h4>Google Site Verification</h4><span>NOTE: Paste "google site verification code content below."</span>
-		<p>&lt;meta name="google-site-verification" content="<strong>LwGQPJ4cN28LKbS5eVkHxbOcoYnsISb3IXLNsMnIk</strong>"&gt;</p>
-			<div class="pTxl"><textarea class="expand40-50 pAm"  name="googleVerification" ><?=$params->__get('google_verification'); ?></textarea></div>
+		<h4>Google Site Verification</h4>
+			<div class="pTxl"><input type="text" name="siteVerification" value="" /></div>
 		</div>
 		<div class="clearfix mTl pBl borderTop">
-		<h4>Google Analytics</h4><span>NOTE: Remove "&lt;script type="text/javascript"&gt;&lt;/script&gt;" from the code. Place what ever is inside this tag below.</span>
-			<div class="pTxl"><textarea class="expand170-250 pAm"  name="g_analytics" ><?=$params->__get('google_analytics'); ?></textarea></div>
+		<h4>Google Analytics</h4>
+			<div class="pTxl"><textarea class="expand170-250 pAm"  name="g_analytics" ><?=$params->getGoogleAnalytics(); ?></textarea></div>
 		</div>
 	<div class="pVxxl"><input class="save fright" type="submit" name="saveBtn" value=" " /></div>
 </form>

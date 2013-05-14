@@ -1,56 +1,73 @@
 /************************************** HEADER **************************************/
-@import 'C:/WORKSPACE/starfish/Project/1_Website/Design/Main_Layout/css/global';
+@import 'C:/WORKSPACE2/spmi/Project/1_Website/Design/Main_Layout/css/global';
 
 header{
-  height: 160px;
-  padding-top: 35px;
-  width:1024px;
-  margin:0 auto;
+  height: 125px;
   > a{
-    margin-top:45px;
+    margin-top: 17px;
     display:inline-block;
   }
-  section{
-    width:670px;
-    ul#primary_nav,ul#secondary_nav{
-      float:right;
-      list-style: none;
-      padding:0;
-      li{
-        float: left;
-        &.active{
-          a{
-            color: #8CC63F;
-          }
-        }
-        a{
-          font-family: 'AvenirLTStd-Roman';
-          text-decoration:none;
-          padding: 10px 15px;
-          text-align: center;
-          color: #4D4D4D;
-          display: block;
-          font-size: 1.5em;
-          line-height: 0;
-        }
-      }
-    }
-    ul#primary_nav{
-      margin:20px 0 0;
-    }
-    ul#secondary_nav{
-      margin:24px 0 0;
-      li{
-        border-right: 1px solid #ccc;
-        line-height:5px;
-        &.last{
-          border: none !important;
-        }
-        a{
-          padding: 1px 15px;
-          font-size: 1.3em;
-        }
+  #secondary_nav{
+    li{
+      list-style:none;
+      font-size:1.0em;
+      a{
+       margin-right:109px; 
       }
     }
   }
-}
+  #primary_nav{
+    height: 32px;
+    & > li{
+      display:inline-table;
+      list-style:none;
+      border-right: 1px solid $darkBlue;
+      padding-right: 12px;
+      &.last{
+        border-right: 0;
+      }
+      a{
+        line-height: 34px;
+        padding: 0 37px;
+        font-weight:bold;
+        font-size: 1.2em;
+      }
+      ul{
+        margin-top: 0px;
+        padding:0;
+        li{
+          display:none;
+          height: 28px;
+          width:100%;
+          line-height: 30px;
+          border-bottom: 1px solid grey;
+          background-color: #000000;
+          opacity:0.8;
+          a{
+            color:$white;
+            &:hover{
+              color:$orange;
+            }
+          }
+        }
+      }
+      &:last-child{
+          border-bottom:0;
+        }
+      &:hover{
+        ul{
+          position:absolute;
+          li{
+            text-align:center;
+            display:block;
+            float:none;
+            border-right:0;
+            >a{
+              padding: 0px 10px 0px 10px;
+            }
+          }
+        }
+      }
+      }
+    }
+  }

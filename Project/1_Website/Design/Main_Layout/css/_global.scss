@@ -6,34 +6,18 @@ $hover : 'hover';
 //** STARFISH COLOR SCHEME ***********************************************************************//
 
 //Primary colors
-$starfishRed    :#BF1E2D;
-$gray           :#939597;
-$grayHeadings   :#373837;
-$darkGray       :#221F20;
-$lightGray      :#EDECEC;
-$linkGray       :#58585B;
+$white          :#FFFFFF;
+$blueHeader     :#0B53A0;
+$orange         :#F47E20;
+$darkBlue       :#0B53A0;
+$greyBg         :#D0D2D3;
 //secondary colors
-$starfishBlue   :#2AACE3;
-$starfishGreen  :#7EBA41;
-$starfishOrange :#F05A28;
-$starfishPurple :#673292;
 
 
 //** SPRITES AND BACKGROUNDS SCHEME ***********************************************************************//
-  
+$sprite           :'/Project/1_Website/Design/Main_Layout/images/sprites/sprite.png';
 // you can add as many sprites as you deem necessary and use this to override the
 // default spriteImage and spriteButton source
-
-$tile-1             : '/Project/1_Website/Design/Main_Layout/images/backgrounds/homepage-tile-background.png';
-$defaultSprite      : '/Project/Design/1_Website/Main_Layout/images/sprites/mainsprites.png';
-$darkGrayOverlay    : '/Project/1_Website/Design/Main_Layout/images/backgrounds/darkGray-overlay.png'; 
-$detailedSprites    : '/Project/1_Website/Design/Main_Layout/images/sprites/detailed-sprites.png';
-$flatSprites        : '/Project/1_Website/Design/Main_Layout/images/sprites/flat-sprites.png';
-$starfishEnterprise : '/Project/1_Website/Design/Main_Layout/images/backgrounds/starfish-enterprise.png';
-$socialMedia        : '/Project/1_Website/Design/Main_Layout/images/sprites/social-media.png';
-$starfishLocation   : '/Project/1_Website/Design/Main_Layout/images/backgrounds/starfish-location.jpg';
-$transparentOverlay : '/Project/1_Website/Design/Main_Layout/images/backgrounds/transparent-overlay.png'; 
-  
   
   
 .sprite {

@@ -1,0 +1,25 @@
+/************************************** FOOTER **************************************/
+.sprite, footer .footerLogo {
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-color: transparent; }
+
+footer .footerLogo {
+  margin: 10px;
+  width: 94px !important;
+  height: 45px !important;
+  background-position: 0px 0px;
+  background-image: url("/Project/1_Website/Design/Main_Layout/images/sprites/sprite.png"); }
+footer #primary_nav li {
+  display: table-cell;
+  margin-right: 15px; }
+  footer #primary_nav li a {
+    color: #0b53a0 !important;
+    margin-right: 20px;
+    line-height: 42px;
+    font-size: .9em; }
+footer #orangeWrap {
+  width: 428px;
+  height: 172px; }
