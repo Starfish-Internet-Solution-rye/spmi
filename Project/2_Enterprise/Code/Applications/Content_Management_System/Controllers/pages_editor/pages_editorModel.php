@@ -5,6 +5,17 @@ class pages_editorModel extends modelSuperClass_Core
 {
 	
 	private  $fileNameOfPageXML;
+	private	 $language;
+	
+	public function setLangauge($language)
+	{
+		$this->language = $language;
+	}
+	
+	public function getLangauge()
+	{
+		return $this->language;
+	}
 	
 	
 	public function getPageXML($pagesXML)
@@ -26,7 +37,12 @@ class pages_editorModel extends modelSuperClass_Core
 				$parent_pageArray		= $pagesXML->xpath("//page[page_id='".$page_selected."']/../page_id");
 				$parent_page			= strval($parent_pageArray[0]);
 				
-				$this->fileNameOfPageXML = 'Data/'.PRIMARY_DOMAIN.'/Content/Pages/'.$currentNavigationGroup.'/'.$parent_page.'/'.$page_selected.'.xml';
+				//check if language is set if it is load the chinese version of the xml
+				if(isset($this->language))
+					$this->fileNameOfPageXML = 'Data/'.PRIMARY_DOMAIN.'/Content/Pages/'.$currentNavigationGroup.'/'.$parent_page.'/'.$page_selected.'-chinese.xml';
+				else
+					$this->fileNameOfPageXML = 'Data/'.PRIMARY_DOMAIN.'/Content/Pages/'.$currentNavigationGroup.'/'.$parent_page.'/'.$page_selected.'.xml';
+				
 				$pageXML = $dataHandler->loadDataSimpleXML($this->fileNameOfPageXML);
 
 			}
@@ -34,7 +50,13 @@ class pages_editorModel extends modelSuperClass_Core
 			else
 			{
 				$currentNavigationGroup = strval($navigationNamesArray[0]);
-				$this->fileNameOfPageXML = 'Data/'.PRIMARY_DOMAIN.'/Content/Pages/'.$currentNavigationGroup.'/'.$page_selected.'/data.xml';
+				
+				//check if language is set if it is load the chinese version of the xml
+				if(isset($this->language))
+					$this->fileNameOfPageXML = 'Data/'.PRIMARY_DOMAIN.'/Content/Pages/'.$currentNavigationGroup.'/'.$page_selected.'/data-chinese.xml';
+				else
+					$this->fileNameOfPageXML = 'Data/'.PRIMARY_DOMAIN.'/Content/Pages/'.$currentNavigationGroup.'/'.$page_selected.'/data.xml';
+				
 				$pageXML = $dataHandler->loadDataSimpleXML($this->fileNameOfPageXML);
 			}
 		}
@@ -47,12 +69,12 @@ class pages_editorModel extends modelSuperClass_Core
 			$defaultPageXML = $pagesXML->xpath("/pages/navigation_group/page[@xml='default']");
 			$defaultPage = strval($defaultPageXML[0]->page_id);
 	
-	
 			$this->fileNameOfPageXML = 'Data/'.PRIMARY_DOMAIN.'/Content/Pages/'.$currentNavigationGroup.'/'.$defaultPage.'/data.xml';
 	
 			$dataHandler = new dataHandler();
 			$pageXML = $dataHandler->loadDataSimpleXML('Data/'.PRIMARY_DOMAIN.'/Content/Pages/'.$currentNavigationGroup.'/'.$defaultPage.'/data.xml');
 		}
+		
 		return $pageXML;
 	}
 	
@@ -156,7 +178,7 @@ class pages_editorModel extends modelSuperClass_Core
 		{
 			if  ($node->nodeType==XML_ELEMENT_NODE)
 			{
-				if ($node->childNodes->length > 1)
+				if (($node->childNodes->length > 1) AND ($node->nodeName != 'image'))
 				{
 					//Do nothing - as its a container/grouping element
 				}
@@ -171,38 +193,7 @@ class pages_editorModel extends modelSuperClass_Core
 						
 						debug::getInstance()->logVariable($string,'$string',true,'green',true);
 	
-						if ($node->nodeName=='filename')
-						{
-							$currentFilename = $_POST['currentFileName'.$idCount];
-							 
-							$fileExtension = $_POST['fileExtension'.$idCount];
-							 
-							//get rid of spaces
-							$newfilename = str_replace(' ','-',$_POST[$this->yui_rte_prefix.$idCount]);
-							$string = $newfilename;
-							 
-							if ($fileExtension!='') //sometimes the field is filled with nonsense info as a placemarker for instance
-							{
-								//the current Filename must have the base string in it
-								if (false===strpos($newfilename,routes::getInstance()->getCurrentSectionBase()))
-								{
-									$newfilename = $newfilename.'-'.routes::getInstance()->getCurrentSectionBase();
-								}
-	
-								$newfilename = $newfilename.$fileExtension;
-								$string = $newfilename;
-								 
-								if($currentFilename != $newfilename)
-								{
-									$sourcePath =  $this->getCodeBasePathToFile().'/data/images';
-									$groupName = $_POST['groupFolderName'.$idCount];
-						    
-									$image = new imageHandler;
-									$image->renameAllOccurrencesOfAnImage($currentFilename,$newfilename,$sourcePath,$groupName);
-								}
-							}
-						}
-	
+						//var_dump($node->nodeName); die;
 	
 						if ($string=='')
 						{
@@ -212,7 +203,7 @@ class pages_editorModel extends modelSuperClass_Core
 						}
 	
 						$string = stripslashes($string);
-						$string = strip_tags($string,'<b><i><u><hr><a><sub><sup><blockquote><br><ul><ol><li><img><p><table><tbody><tr><td><h1><h2><h3><h4><h5><h6>');
+						$string = strip_tags($string,'<strong><b><i><u><hr><a><sub><sup><blockquote><br><ul><ol><li><img><p><table><tbody><tr><td><h1><h2><h3><h4><h5><h6>');
 						//$string = str_replace ( '&#039;', '\'', $string );
 						$string = str_replace ( '&quot;', '\"', $string );
 						$string = str_replace ( '&lt;', '<', $string );
@@ -235,8 +226,35 @@ class pages_editorModel extends modelSuperClass_Core
 							$node->nodeValue = $string;
 						}
 					}
-					 
-					 
+					elseif(isset($_POST[$this->yui_rte_prefix.$idCount.'_image']))
+					{
+						require_once 'Project/Model/Photo_Library/image/images.php';
+						
+						$image_id = $_POST[$idCount.'_image'];
+						
+						$image = new image();
+						$image->setImageId($image_id);
+						//do query to get image details
+
+						$image->selectInfoForCMS();
+						$filename = str_replace('_', ' ', $image->getFilename());
+						$full_path = $image->getFullPath();
+						$thumbnail_path = $image->getThumbnailPath();
+						$dimensions = getimagesize(STAR_SITE_ROOT.'/'.PHOTO_LIBRARY_DIRECTORY.'/'.$image->getFullPath());
+						$height = $dimensions[1];
+						$width = $dimensions[0];
+						$caption = $image->getImageCaption();
+						
+						$node->setAttribute('id', $image_id);
+						$node_details = "\n\t<alternative_text>$filename</alternative_text>\n\t";
+						$node_details .= "<path>$full_path</path>\n\t";
+						$node_details .= "<thumbnail_path>$thumbnail_path</thumbnail_path>\n\t";
+						$node_details .= "<height>$height</height>\n\t";
+						$node_details .= "<width>$width</width>\n\t";
+						$node_details .= "<caption>$caption</caption>\n";
+						$node->nodeValue = $node_details;
+						
+					}
 					 
 					$idCount++;
 				}

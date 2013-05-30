@@ -1,3 +1,3 @@
 <?phprequire_once FILE_ACCESS_CORE_CODE.'/Framework/MVC_superClasses_Core/controllerSuperClass_Core/controllerSuperClass_Core.php';require_once('Model.php');require_once('View.php');
 class controller extends controllerSuperClass_Core
-{	function indexAction()	{		$view = new view();		$view->renderAll();	}		}?>
+{public function indexAction()	{			$this->loadXML('data');	}		protected function loadXML($xml_file)	{		$view = new view();		$model  = new model();		$url = $_SERVER['REQUEST_URI'];		$language = explode("/", $url);				if($language[1]== 'cn'){						$dataHandler = $model->loadDataSimpleXML($xml_file."-chinese");		}		else			$dataHandler = $model->loadDataSimpleXML($xml_file);				$view->_XMLObj = $dataHandler;		$view->renderAll();	}		}?>

@@ -1,5 +1,12 @@
+<?php 	$url = $_SERVER['REQUEST_URI'];
+		$language = explode("/", $url);
+?>
+
 <!DOCTYPE html>
-<html>
+<!--[if IE 9]><html class="no-js ie9" lang="en" xml:lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" xml:lang="en"><![endif]-->
+<!--[if !IE]><!--><html class="no-js" lang="<?=($language[1] == 'cn')? "cn" :  "en" ?>"><!--<![endif]-->
+
 <head>
 	<?=metaData::getInstance()->getMetaData(); ?>
 		||global_css||
@@ -10,22 +17,24 @@
 			||local_javascript_top||
 		</script>
 </head>
-<body <?=$this->getIdForPage(); ?>>
 
-		<section id="wrapper">
+<body <?=$this->getIdForPage(); ?> class="<?=($language[1] == 'cn')? "chinese" :  "" ?>">
+
+		<div id="wrapper">
 			%%HEADER_CONTENT%%
 			
-			<section id="<?=routes::getInstance()->getCurrentTopLevelPageID()?>_container" class="clearfix">
+			<div id="<?=routes::getInstance()->getCurrentTopLevelPageID()?>_container" class="clearfix">
 				%%MAIN_CONTENT%%
-			</section>
+			</div>
 			
 			%%FOOTER_CONTENT%%
-		</section>
+		</div>
 		
 		||dialogues||
 		||global_javascript_bottom||
 		<script type="text/javascript">
-			Cufon.now();
+		<?=(userSession::getLanguage() == 'chinese')? "" :  "Cufon.now();" ?>
+		
 			||local_javascript_bottom||
 			
 		</script>

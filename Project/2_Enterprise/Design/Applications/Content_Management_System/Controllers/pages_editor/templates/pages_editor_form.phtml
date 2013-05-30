@@ -1,3 +1,15 @@
+<div id="changeLanguage"class="pRxxl clearfix">
+	<form method="post" action="<?php $_SERVER['REQUEST_URI']?>">
+		<?php if(isset($_POST['language']) && $_POST['language'] == 'chinese' || (isset($_POST['save']) && $_POST['save'] == 'chinese')):?>
+			<input type="submit" class="active" name="language"  value="chinese"/>
+			<input type="submit" name="language"  value="english"/>
+		<?else:?>
+			<input type="submit" name="language"  value="chinese"/>
+			<input type="submit" class="active" name="language"  value="english"/>
+		<?php endif?>
+	</form>
+</div>	
+
 <?$i = 1;$count = 0;?>
 <!--FOR PHOTO CHOOSER-->
 <form method="post" action="" class="clearfix">
@@ -5,7 +17,6 @@
 <!--XML NODES!-->
 	<?foreach($this->_get('array_of_xml') as $node):?>
 		<?if($node['name'] !== 'data' && $node['tag'] != 'END'):?>
-		
 		 <!--IF NODE IS AN IMAGE-->
 		  <?if($node['name'] === 'image_id'):$count++;?>
 			<div class="clearfix pTm image_group" id="node_<?=$i?>">
@@ -20,7 +31,19 @@
 					</div>
 			</div>
 			<?$i++;?>
-		      
+			<?elseif($node['name'] === 'image'):?>
+				<div class="clearfix pTm image_group" id="node_<?=$i?>">
+					<div class="posRel clearfix">
+						<div class="image_holder fleft mRl">
+							<div id="image_overflow">
+								<div id="img" style="background-image:url(<?='http://'.$_SERVER['SERVER_NAME'].'/'.PHOTO_LIBRARY_DIRECTORY.'/'.$node['image_path']?>)"></div>
+							</div>
+						</div>
+						<input class="image_id" type="hidden" name="<?=$i?>_image" value="<?=$node['attributes']['id']?>"> 
+						<span class="show_photo_chooser pointer fleft posAbs" id="node_<?=$i?>"></span>
+					</div>
+				</div>
+				<?$i++;?>
 		  <?else:$count = 0;?>
 			<div class="clearfix pTm">
 			<?$clean_description = array('_','editor')?>
@@ -43,7 +66,11 @@
 		<?endif;?>
 	<?endforeach;?>
 	</div>
-	<input class=" mAl save" type="submit" name="save"/>
+	<?php if(isset($_POST['language']) && $_POST['language'] == 'chinese' || (isset($_POST['save']) && $_POST['save'] == 'chinese')):?>
+		<input class=" mAl save" type="submit" name="save" value="chinese"/>
+	<?else:?>
+		<input class=" mAl save" type="submit" name="save"/>
+	<?php endif?>
 </form>
 <div class="popupDialog imageId_error hide">
     <span class="deleteText fc_starfish_gray8 fwB"><span class="fc_starfish_red">ERROR</span> retrieving albums, check image_id.</span>

@@ -5,24 +5,28 @@
     height:315px;
     width:900px;
   }
-}
-// ---------------------Pages---------------
-.lowerPanel{
-  position:relative;
-  .opaqueNav{
-    height:45px;
-    width:900px;
-    padding: 12px;
-    background-color:#000000;
-    z-index: 10;
-    top: -45px;
-    opacity:0.8;
-    a{
-      color:$white;
-      font-size:1.8em;
-      margin-right: 34px;
+  .nivo-caption{
+    display:none!important;
+  }
+  .nivo-directionNav{
+    display:block!important;
+    .nivo-prevNav{
+      top:120px;
+      margin-left:20px;
+      font-size:0;
+      @include sprite(19px, 36px, -119px, 0px,$hover:'no-hover',$img:$sprite);
+    }
+    .nivo-nextNav{
+      top:120px;
+      margin-right:20px;
+      font-size:0;
+      @include sprite(19px, 36px, -139px, 0px,$hover:'no-hover',$img:$sprite);
     }
   }
+}
+// ---------------------about---------------
+.lowerPanel{
+  position:relative;
   #aboutContainer{
     .activePointer{
       position:absolute;
@@ -31,51 +35,110 @@
       @include sprite(20px, 20px, -97px, 9px,$hover:'no-hover',$img:$sprite);
     }
     #aboutPointer{
-      margin-left: 50px;
-    }
-    #businessPointer{
-      margin-left:213px;
+      margin-left: 89px;
     }
     .upperContent{
       background-color:$greyBg;
-      height:331px;
-      padding: 36px 0px 0px 64px;
+      min-height:140px;
+      padding: 35px 50px 35px 50px;
+      overflow: hidden;
       >h3{
         color:$blueHeader;
         float:left;
+        line-height: 32px;
       }
-      >p{//remove if CMS is fixed!
-        float:right;
-        width: 571px;
-        line-height: 19px;
+      >p{
+      	font-size:14px;
+        float:left;
+        margin-left:20px;
+        width: 510px;
+        line-height: 23px;
       }
-      #orangeWrap{
+    }
+    .lowerContent{
+      width:900px;
+      .orangeContainer{
         left:0;
-        padding:35px 0px 0px 30px;
-        width:428px;
-        height:172px;
+        width:490px;
+        height:272px;
         background-color:$orange;
         bottom: 18px;
-        padding: 35px 35px 30px 30px;
+        padding: 60px 30px 60px 30px;
         >p{
           color:$white;
-          line-height:20px;
+          line-height:32px;
         }
       }
-      .imgHolder{
-        margin-top: 19px;
-        width: 476px;
-        height:174px;
-        background:{
-          image:url('/Project/1_Website/Design/Main_Layout/images/temporaryImages/aboutImage.png');
-          size:contain;
-          repeat:no-repeat;
-        }
+    }
+    .imgHolder{
+      width: 410px;
+      height:272px;
       }
-      #orangeContent{
+  }
+}
+// ******************************business philisophy**************************
+#businessContainer{
+  color:$white;
+  background-color:$greyBg;
+  h4{
+    margin-bottom: 10px;
+  }
+  .activePointer{
+    position:absolute;
+    top:-20px;
+    z-index: 99;
+    @include sprite(20px, 20px, -97px, 9px,$hover:'no-hover',$img:$sprite);
+    }
+    #businessPointer{
+      margin-left:246px;
+      }
+  .upperContent{
+    padding:0;
+    #visionHolder{
       width:428px;
       height:172px;
+      background-color:$blueHeader;
+      padding:35px;
+      h4{
+        color:$orange;
+      }
+      p{
+        line-height: 20px;
+      }
     }
+    #visionImg{
+      height:172px;
+      width:472px;
+    }
+    #missionImg{
+      width:428px;
+      height:272px;
+    }
+    #missionHolder{
+      background-color:$orange;
+      width:472px;
+      height:272px;
+      padding:35px;
+      p{
+        line-height:14px;
+      }
+      >h4,strong{
+        color:$blueHeader;
+      }
+    }
+  }
+}
+  // *************CHINESE CSS***************
+.chinese{
+  #aboutPointer {
+    margin-left:  60px!important;
+  }
+  #businessPointer{
+    margin-left:145px!important;
+  }
+  #missionHolder{
+    p{
+      line-height: 25px!important;
     }
   }
 }

@@ -1,12 +1,26 @@
-<header>
-	<div class="fleft">
-		<a href="/"><img alt="affordable websites" title="Starfish Internet Solutions" src="/Project/1_Website/Design/Panels/header/images/spmiLogo.png" /></a>
-		<p>FIBER, OUR STRENGTH</p>
+<?php 
+$url = $_SERVER['REQUEST_URI'];
+$language = explode("/", $url);
+
+?>
+
+<div id="header">
+	<div class="fleft mBm">
+		<a href="<?=($language[1]  == 'cn')? "/cn" : "/" ?>"><img alt="affordable websites" title="Starfish Internet Solutions" src="<?=($language[1]  == 'cn')? "/Project/1_Website/Design/Panels/header/images/spmiLogoCN.png" :  "/Project/1_Website/Design/Panels/header/images/spmiLogo.png" ?>" /></a>
 	</div>
-	<section class="fright clearfix">
+
+	<div id="secondaryNavHolder"class="clearfix">
 		<?= navigation::displayNavigationForPages('secondary')?>
-	</section>
-	<section class="fright clearfix">
-			<?= navigation::displayNavigationForPages('primary','','',true); ?>
-	</section>	
-</header>
+		<ul id="selectLanguage">
+			<li>
+				<a href="/multilingual/multilingual/changeLanguage/language/english?location=<?=$_SERVER['REQUEST_URI']?>">English</a>
+			</li>
+			<li>
+				<a href="/multilingual/multilingual/changeLanguage/language/chinese?location=<?=$_SERVER['REQUEST_URI']?>">&#x4E2D;&#x6587;</a>
+			</li>
+		</ul>
+	</div>
+	<div class="clearfix">
+				<?= navigation::displayNavigationForPages('primary','','',true); ?>
+	</div>	
+</div>

@@ -1,0 +1,41 @@
+.sprite {
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-color: transparent; }
+
+#appImg {
+  height: 245px; }
+  #appImg #appWrap {
+    display: block;
+    width: 318px;
+    z-index: 2;
+    opacity: 0.89;
+    background-color: #f47e20;
+    padding-top: 202px;
+    padding-left: 20px; }
+    #appImg #appWrap > h1 {
+      color: white; }
+
+.lowerPanel {
+  min-height: 300px; }
+  .lowerPanel #appContainer {
+    color: white;
+    padding: 30px;
+    width: 450px;
+    height: 317px;
+    background-color: #0b53a0; }
+
+#appImages {
+  padding: 20px;
+  width: 450px; }
+  #appImages table {
+    width: 400px!important;
+    margin: 0 auto; }
+  #appImages p {
+    font-size: 12px;
+    color: #0b53a0; }
+
+.chinese #appWrap {
+  padding-top: 208px!important; }

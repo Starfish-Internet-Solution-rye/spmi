@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<data>
+	<metadata>
+		<page_title_element>Masd</page_title_element>
+		<meta_description>.</meta_description>
+	</metadata>
+<image id="49">
+	<alternative_text>Application</alternative_text>
+	<path>applications_album/244x900/Application.png</path>
+	<thumbnail_path>applications_album/244x900_thumb/Application.png</thumbnail_path>
+	<height>244</height>
+	<width>900</width>
+	<caption>Place caption here.</caption>
+</image>
+	<page_content_editor><![CDATA[<p>&#x7312;&#x7335; &#x8905;&#x890C;&#x8AC3; &#x5246;&#x5772;&#x59CF; &#x6189;, &#x698E;&#x69AF;&#x69C4; &#x87AD;&#x87C5;&#x8B15; &#x8F5E;&#x9A39;&#x9F1A; &#x934E;&#x979A; &#x8F18; &#x99BA; &#x7B9B;&#x7B99; &#x9CF1;&#x5107;&#x563D; &#x6A06;&#x6A26;&#x6F4F;, &#x6EBE; &#x68EB;&#x6913; &#x8694;&#x8DB5;&#x90DA; &#x5CF7;&#x654A;&#x6D6D;, &#x6F67; &#x9C14;&#x9D9F; &#x84C2;&#x84CC;&#x84D6; &#x5B0F;&#x5D9F;&#x6A00; &#x9E03;&#x9F1E;&#x6B18; &#x6FC8;&#x7004; &#x57A5;&#x5A00;&#x5EA3; &#x8B4B;&#x8F50;&#x93D5; &#x7A9E;&#x7D86;&#x8164; &#x6F63;, &#x9455;&#x9B1E;&#x9B20; &#x8589;&#x857A;&#x8582; &#x755F;&#x75C4; &#x75F5;, &#x61A2;&#x6189;&#x646E; &#x9D9F;&#x5139;&#x5DCF; &#x8547;&#x8571; &#x8F20; &#x5CF9;&#x6358; &#x8639;&#x882E;&#x8E98; &#x5E68;&#x61C5;&#x61B4; &#x78CF;, &#x5890; &#x5853;&#x5855; &#x9346;&#x930C;&#x96D4; &#x8F52;&#x91AD;&#x93F9; &#x8530; &#x9D79;&#x9D7F; &#x5C7C;&#x6C46;&#x51B9; &#x87BE;&#x893E;&#x8CF9;, &#x9864;&#x9C29;&#x9DCE; &#x6F26;&#x6F8C;&#x6F6C; &#x68AA;&#x6DAB;&#x6E74; &#x6C09;&#x71E1; &#x9B61; &#x6EC8;&#x6E94;&#x6EC6; &#x6EAE;&#x7161;&#x715F; &#x6A8C;&#x6A92;&#x6FE6; &#x6FDE;&#x6FE2; &#x850D;, &#x845D; &#x99D4;&#x9CFF; &#x8905;&#x890C;&#x8AC3; &#x8639;&#x882E;&#x8E98;, &#x9A68;&#x8A11;&#x7D31; &#x99BB;&#x5648;&#x5AF6; &#x5615; &#x69B1;&#x698E;</p>
+]]></page_content_editor>
+<page_content_editor_1><![CDATA[<table align="center" border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<tbody>
+		<tr>
+			<td>
+			<p><img alt="Place caption here." src="/Data/Images/applications_album/103x171/coffeeBean.png" style="height:103px; width:171px" title="coffeeBean" /></p>
+
+			<p style="text-align:center">&nbsp;&#x6BC4;&#x6EF1;&#x6F2E;</p>
+			</td>
+			<td style="text-align:center">
+			<p><img alt="Place caption here." src="/Data/Images/applications_album/103x171/money.png" style="height:103px; width:171px" title="money" /></p>
+
+			<p>&#x7746; &#x6938;&#x6962;</p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="text-align:center">
+			<p><img alt="Place caption here." src="/Data/Images/applications_album/103x171/tea.png" style="height:103px; width:171px" title="tea" /></p>
+
+			<p>&#x61E5;&#x65B6;, &#x9788;&#x9828;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+]]></page_content_editor_1>
+
+</data>

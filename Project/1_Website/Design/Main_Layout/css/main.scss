@@ -4,6 +4,53 @@
 #wrapper {
   background-color:$white;
   min-height: 300px;
+  overflow:hidden;
   margin:0 auto;
   width: 900px;
+}
+.backgroundSet{
+  background-size:contain;
+  repeat:no-repeat;
+  }
+  .opaqueNav{
+    height:45px;
+    width:900px;
+    padding: 12px;
+    background-color:#000000;
+    z-index: 10;
+    top: -45px;
+    opacity:0.8;
+    ul{
+      padding:0;
+      margin-left: 38px;
+     li{
+       display:table-cell;
+       line-height: 5px;
+      a{
+        color:$white;
+        font-size:1.8em;
+        margin-right: 34px;
+      }
+     } 
+    }
+  }
+  .activePointer{
+    position:absolute;
+    top:-20px;
+    z-index: 99;
+    @include sprite(20px, 20px, -97px, 9px,$hover:'no-hover',$img:$sprite);
+    }
+
+// *************CHINESE CSS***************
+.chinese{
+  #header{
+    #primary_nav{
+      li{
+        padding-right: 23px!important;
+        a{
+          padding: 0 43px!important;
+        }
+      }
+    }
+  }  
 }

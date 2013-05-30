@@ -1,5 +1,5 @@
 /*********************************Content Manager *********************************/
-@import 'C:/WORKSPACE/starfish/Project/2_Enterprise/Design/Main_Layout/css/global';
+@import 'C:/WORKSPACE2/spmi/Project/2_Enterprise/Design/Main_Layout/css/global';
 
 #outer_wrapper{
   #leftColumn{
@@ -10,7 +10,26 @@
     }
   }
 }
-
+// ******************languange chooser**************
+#changeLanguage{
+  input[value="english"]{
+     @include buttonSprite(94px,32px,-686px,-177px);
+     background-image: url($sprite2);
+     &.active{
+       @include buttonSprite(94px,32px,-686px,-144px);
+       background-image: url($sprite2);
+     }
+  }
+  input[value="chinese"]{
+    @include buttonSprite(94px,32px,-779px,-144px);
+     background-image: url($sprite2);
+     &.active{
+       @include buttonSprite(94px,32px,-779px,-177px);
+       background-image: url($sprite2);
+     }
+  }
+}
+// *************************************************
 
 #pageNavigation{
   @include buttonSprite(188px,32px,-686px,-110px);

@@ -10,7 +10,7 @@
    Typography
    ========================================================================== */
 body {
-  font-family: 'HELVETICALTSTD-ROMAN',arial,tahoma,verdana,sans-serif;
+  font-family: 'Helvetica',arial,tahoma,verdana,sans-serif;
   font-size: 62.5%;
   -webkit-text-size-adjust: 62.5%;
   -ms-text-size-adjust: 62.5%; }
@@ -128,7 +128,7 @@ blockquote *:first-child:after {
 
 p {
   margin: 0 0 9px;
-  font-size: 1.2em;
+  font-size: 1.4em;
   line-height: 27px;
   word-wrap: break-word; }
 

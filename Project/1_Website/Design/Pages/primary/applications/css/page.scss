@@ -1,0 +1,45 @@
+@import 'C:/WORKSPACE2/spmi/Project/1_Website/Design/Main_Layout/css/global';
+
+#appImg{
+  height: 245px;
+  #appWrap{
+    display:block;
+    width:318px;
+    z-index:2;
+    opacity:0.89;
+    background-color:$orange;
+    padding-top: 202px;
+    padding-left: 20px;
+    >h1{
+      color:$white;
+      }
+  }
+}
+.lowerPanel{
+  min-height:300px;
+  #appContainer{
+    color:$white;
+    padding:30px;
+    width:450px;
+    height:317px;
+    background-color:$blueHeader;
+  }
+}
+#appImages{
+  padding: 20px;
+  width:450px;
+  table{
+    width:400px!important;
+    margin: 0 auto;
+  }
+  p{
+    font-size:12px;
+    color:$blueHeader;
+  }
+}
+// **********************CHINESE******************
+.chinese{
+  #appWrap{
+    padding-top: 208px!important;
+  }
+}

@@ -1,12 +1,13 @@
 /************************************** FOOTER **************************************/
 @import 'C:/WORKSPACE2/spmi/Project/1_Website/Design/Main_Layout/css/global';
 
-footer{
+#footer{
   .footerLogo{
     margin: 10px;
     @include sprite(94px, 45px, 0px, 0px,$hover:'no-hover',$img:$sprite);
   }
-  #primary_nav{
+  #primary_nav,#secondary_nav{
+    float:left;
     li{
     display:table-cell;
     margin-right: 15px;
@@ -18,5 +19,8 @@ footer{
       }
     }
   }
+    #secondary_nav{
+      padding:0;
+    }
 }
 

@@ -6,57 +6,73 @@
   background-repeat: no-repeat;
   background-color: transparent; }
 
-header {
-  height: 125px; }
-  header > div a {
+#header {
+  box-shadow: 0px 15px 42px -6px #a7a5a5;
+  position: relative;
+  z-index: 9999; }
+  #header div a {
     margin-top: 17px;
     display: inline-block; }
-  header > div p {
+  #header div p {
     font-size: .95em;
     color: #808184;
-    margin-left: 59px;
+    margin-left: 51px;
     line-height: 6px; }
-  header #secondary_nav li {
-    list-style: none;
-    font-size: 1.0em; }
-    header #secondary_nav li a {
-      margin-right: 109px; }
-  header #primary_nav {
-    height: 32px; }
-    header #primary_nav > li {
+  #header #secondaryNavHolder {
+    padding-left: 675px; }
+    #header #secondaryNavHolder #secondary_nav, #header #secondaryNavHolder ul {
+      display: inline;
+      float: left; }
+      #header #secondaryNavHolder #secondary_nav a, #header #secondaryNavHolder ul a {
+        margin-right: 10px; }
+      #header #secondaryNavHolder #secondary_nav li, #header #secondaryNavHolder ul li {
+        list-style: none;
+        font-size: 1.0em;
+        display: table-cell; }
+    #header #secondaryNavHolder #selectLanguage {
+      padding: 0; }
+      #header #secondaryNavHolder #selectLanguage li a {
+        float: right;
+        color: #808184; }
+  #header div #primary_nav {
+    margin: 0; }
+    #header div #primary_nav > li {
       display: inline-table;
       list-style: none;
+      height: 10px;
       padding-right: 12px; }
-      header #primary_nav > li.last a {
-        border-right: 0; }
-      header #primary_nav > li a {
-        line-height: 42px;
-        padding: 0 36px;
-        font-weight: bold;
-        font-size: 1.2em;
+      #header div #primary_nav > li > span {
         border-right: 1px solid #0b53a0; }
-      header #primary_nav > li > ul {
+      #header div #primary_nav > li.last span {
+        border-right: 0; }
+      #header div #primary_nav > li a {
+        height: 22px;
+        margin: 0;
+        padding: 0 32px;
+        font-weight: bold;
+        font-size: 1.2em; }
+      #header div #primary_nav > li > ul {
+        z-index: 99;
         margin-top: 0px;
         padding: 0; }
-        header #primary_nav > li > ul li {
+        #header div #primary_nav > li > ul li {
+          height: 32px;
           display: none;
           width: 100%;
           border-bottom: 1px solid grey;
           background-color: #000000;
           opacity: 0.8; }
-          header #primary_nav > li > ul li a {
-            color: white;
-            border-right: 0; }
-            header #primary_nav > li > ul li a:hover {
-              color: #f47e20; }
-      header #primary_nav > li:last-child {
-        border-bottom: 0; }
-      header #primary_nav > li:hover ul {
+          #header div #primary_nav > li > ul li a {
+            margin: 10px 0px 10px 0px;
+            color: white; }
+        #header div #primary_nav > li > ul:last-child a {
+          border-bottom: 0; }
+      #header div #primary_nav > li:hover ul {
         position: absolute; }
-        header #primary_nav > li:hover ul li {
+        #header div #primary_nav > li:hover ul li {
           text-align: center;
           display: block;
           float: none;
           border-right: 0; }
-          header #primary_nav > li:hover ul li > a {
+          #header div #primary_nav > li:hover ul li > a {
             padding: 0px 10px 0px 10px; }

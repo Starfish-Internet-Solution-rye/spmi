@@ -1,0 +1,33 @@
+.sprite {
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-color: transparent; }
+
+.bannerContainer #fiberImg {
+  width: 914px;
+  display: block;
+  background-size: contain; }
+.bannerContainer #blueWrap {
+  height: 248px;
+  display: block;
+  width: 318px;
+  z-index: 2;
+  opacity: 0.89;
+  background-color: #0b53a0;
+  padding-top: 207px;
+  padding-left: 50px; }
+  .bannerContainer #blueWrap > h1 {
+    color: white; }
+
+.lowerPanel .productContainer {
+  width: 100%;
+  padding: 45px; }
+  .lowerPanel .productContainer:nth-of-type(odd) {
+    background-color: #d0d2d3; }
+  .lowerPanel .productContainer img {
+    margin: 10px; }
+  .lowerPanel .productContainer h4 {
+    color: #0b53a0;
+    margin-bottom: 10px; }

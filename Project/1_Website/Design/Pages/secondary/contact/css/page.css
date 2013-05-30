@@ -1,0 +1,128 @@
+.sprite, #contact_container #contactDetails #contactContent div #address, #contact_container #contactDetails #contactContent div #telephoneNo, #contact_container #contactDetails #contactContent div #emailLogo, #formWrap #contactForm form input[type="submit"], .chinese #contactForm input[type="submit"] {
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-color: transparent; }
+
+#contact_container {
+  background-color: #e6e7e8; }
+  #contact_container #contactDetails {
+    width: 309px; }
+    #contact_container #contactDetails #contactHeader {
+      padding: 30px 0px 0px 80px;
+      color: #0b53a0; }
+    #contact_container #contactDetails hr {
+      width: 285px;
+      margin: 0;
+      border: 2px solid #0b53a0; }
+    #contact_container #contactDetails #contactContent {
+      height: 320px;
+      width: 309px;
+      padding: 30px 30px 3px 30px; }
+      #contact_container #contactDetails #contactContent > h6 {
+        font-size: 12px;
+        color: #0b53a0; }
+      #contact_container #contactDetails #contactContent div p {
+        line-height: 16px; }
+      #contact_container #contactDetails #contactContent div #address {
+        width: 38px !important;
+        height: 38px !important;
+        background-position: 0px -47px;
+        background-image: url("/Project/1_Website/Design/Main_Layout/images/sprites/sprite.png"); }
+      #contact_container #contactDetails #contactContent div #telephoneNo {
+        width: 38px !important;
+        height: 38px !important;
+        background-position: -42px -47px;
+        background-image: url("/Project/1_Website/Design/Main_Layout/images/sprites/sprite.png"); }
+      #contact_container #contactDetails #contactContent div #emailLogo {
+        width: 38px !important;
+        height: 38px !important;
+        background-position: -83px -47px;
+        background-image: url("/Project/1_Website/Design/Main_Layout/images/sprites/sprite.png"); }
+    #contact_container #contactDetails #map #googleMap {
+      height: 224px;
+      width: 308px; }
+    #contact_container #contactDetails #map hr {
+      width: 40%;
+      margin: 10px auto; }
+    #contact_container #contactDetails #map p {
+      margin: 30px;
+      text-align: center;
+      line-height: 14px; }
+
+#formWrap {
+  width: 591px;
+  padding: 72px 42px 0px 0px; }
+  #formWrap #contactForm {
+    background-color: white;
+    padding: 20px 20px 20px 30px; }
+    #formWrap #contactForm form p {
+      display: inline;
+      color: #f47e20; }
+      #formWrap #contactForm form p > span {
+        line-height: 35px;
+        display: inline-block;
+        width: 129px;
+        margin: 5px 0px; }
+      #formWrap #contactForm form p #city {
+        margin-left: 130px;
+        width: 30px; }
+      #formWrap #contactForm form p #state {
+        width: 30px;
+        margin-right: 10px; }
+      #formWrap #contactForm form p .bottomLabel {
+        font-size: 1.0em;
+        color: #808184;
+        line-height: 11px;
+        text-align: center;
+        width: 45px; }
+      #formWrap #contactForm form p #cCode {
+        margin-left: 125px; }
+      #formWrap #contactForm form p #aCode {
+        margin-left: 15px; }
+      #formWrap #contactForm form p #number {
+        margin: 0px 190px 0px 12px; }
+    #formWrap #contactForm form #required {
+      font-size: 0.9em;
+      display: block; }
+    #formWrap #contactForm form input[type="text"], #formWrap #contactForm form select, #formWrap #contactForm form textarea {
+      line-height: 24px;
+      width: 370px;
+      margin: 7px 0px; }
+    #formWrap #contactForm form select {
+      border: 1px solid #ccc; }
+    #formWrap #contactForm form input[name="city"], #formWrap #contactForm form input[name="state"] {
+      width: 148px; }
+    #formWrap #contactForm form input[name="countryCode"], #formWrap #contactForm form input[name="countryCodeFax"], #formWrap #contactForm form input[name="areaCode"], #formWrap #contactForm form input[name="areaCodeFax"] {
+      width: 44px;
+      margin-right: 10px; }
+    #formWrap #contactForm form input[name="number"], #formWrap #contactForm form input[name="numberFax"] {
+      width: 253px; }
+    #formWrap #contactForm form textarea {
+      width: 370px;
+      height: 170px;
+      resize: none; }
+    #formWrap #contactForm form input[type="submit"] {
+      width: 106px !important;
+      height: 30px !important;
+      background-position: -167px -49px;
+      background-image: url("/Project/1_Website/Design/Main_Layout/images/sprites/sprite.png");
+      font-size: 0em;
+      margin-right: 130px; }
+    #formWrap #contactForm form #recaptcha_widget_div #recaptcha_area {
+      margin-left: 152px; }
+    #formWrap #contactForm form label.error {
+      position: absolute;
+      right: 22px;
+      color: red;
+      line-height: 7px; }
+
+.chinese #contactForm input[type="submit"] {
+  width: 106px !important;
+  height: 30px !important;
+  background-position: -275px -49px;
+  background-image: url("/Project/1_Website/Design/Main_Layout/images/sprites/sprite.png");
+  font-size: 0em; }
+.chinese #contactForm select[name="country"] {
+  width: 367px!important; }

@@ -1,0 +1,40 @@
+@import 'C:/WORKSPACE2/spmi/Project/1_Website/Design/Main_Layout/css/global';
+
+.bannerContainer{
+  #fiberImg{
+    width:914px;
+    display:block;
+    background-size:contain;
+  }
+  #blueWrap{
+    height:248px;
+    display:block;
+    width:318px;
+    z-index:2;
+    opacity:0.89;
+    background-color:$blueHeader;
+    padding-top: 207px;
+    padding-left: 50px;
+    >h1{
+      color:$white;
+    }
+  }
+}
+.lowerPanel{
+  .productContainer{
+    width:100%;
+    padding:45px;
+    &:nth-of-type(odd){
+      background-color:$greyBg;
+    }
+    &:nth-of-type(even){
+    }
+    img{
+      margin:10px;
+    }
+    h4{
+      color:$blueHeader;
+      margin-bottom:10px;
+    }
+  }
+}

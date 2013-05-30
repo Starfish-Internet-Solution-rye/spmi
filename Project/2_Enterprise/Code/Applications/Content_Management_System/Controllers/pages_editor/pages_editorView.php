@@ -12,7 +12,7 @@ class pages_editor_View  extends applicationsSuperView
 	
 //-------------------------------------------------------------------------------------------------	
 	
-	public function __construct()
+	public function __construct() 
 	{
 		$this->templates_location = 'Project/2_Enterprise/Design/Applications/Content_Management_System/Controllers/pages_editor/templates/';
 		
@@ -48,7 +48,7 @@ class pages_editor_View  extends applicationsSuperView
 		//$pages_editor_view_renderer = new pages_editor_View_Renderer();
 		
 		xmlProcessor::getInstance()->traverseDOM($pageXML,$this,'renderDefaultDOM');
-
+		
 		$content = $this->renderTemplate($this->templates_location.'pages_editor_form.phtml');
 		response::getInstance()->addContentToTree(array('CONTENT_COLUMN'=>$content));
 	}
@@ -57,7 +57,6 @@ class pages_editor_View  extends applicationsSuperView
 	
 	public function renderDefaultDOM ($nodeName,$nodeValue,$attributes,$dom,$startOrEndTag)
 	{
-		
 		$xml_array = array();
 		
 		$xml_array['name']			= $nodeName;
@@ -67,7 +66,6 @@ class pages_editor_View  extends applicationsSuperView
 		$nodeValue = str_replace(']]>', '', $nodeValue);
 		
 		$xml_array['value'] 		= $nodeValue;
-		
 		//if node is image id
 		if($nodeName == 'image_id' && is_numeric($nodeValue))
 		{
@@ -79,8 +77,24 @@ class pages_editor_View  extends applicationsSuperView
 			
 			$xml_array['image_path'] = $image->__get('full_path');
 		}
+		elseif ($nodeName == "image")
+		{
+			require_once 'Project/Model/Photo_Library/image/image.php';
+			
+			$image_id = 0;
+			
+			if (isset($attributes['id']))
+				$image_id = $attributes['id'];
+			
+			$image = new image();
+			
+			$image->setImageId($image_id);
+			$image->selectFullPath(TRUE);
+				
+			$xml_array['image_path'] = $image->getFullPath();
+		}
 		
-		$xml_array['atttributes']	= $attributes;
+		$xml_array['attributes']	= $attributes;
 		$xml_array['tag']			= $startOrEndTag;
 		
 		$this->array_of_xml[] = $xml_array;

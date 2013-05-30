@@ -1,0 +1,155 @@
+@import 'C:/WORKSPACE2/spmi/Project/1_Website/Design/Main_Layout/css/global';
+
+#contact_container{
+  background-color:$contactBg;
+  #contactDetails{
+    width:309px;
+    #contactHeader{
+      padding: 30px 0px 0px 80px;
+      color:$blueHeader;
+    }
+    hr{
+      width:285px;
+      margin:0;
+      border:2px solid $blueHeader;
+    }
+    #contactContent{
+      height:320px;
+      width:309px;
+      padding: 30px 30px 3px 30px;
+      >h6{
+        font-size:12px;
+        color:$blueHeader;
+      }
+      div{
+        p{
+          line-height: 16px;
+        }
+        #address{
+          @include sprite(38px,38px, 0px, -47px,$hover:'no-hover',$img:$sprite);
+        }
+        #telephoneNo{
+          @include sprite(38px,38px, -42px, -47px,$hover:'no-hover',$img:$sprite);
+        }
+        #emailLogo{
+          @include sprite(38px,38px, -83px, -47px,$hover:'no-hover',$img:$sprite);
+        }
+      }
+    }
+    #map{
+      #googleMap{
+          height:224px;
+          width:308px;
+          }
+      hr{
+        width:40%;
+        margin:10px auto;
+      }
+      p{
+        margin:30px;
+        text-align:center;
+        line-height:14px;
+      }
+    }
+  }
+}
+
+#formWrap{
+  width: 591px;
+  padding: 72px 42px 0px 0px;
+  #contactForm{
+    background-color:$white;
+    padding: 20px 20px 20px 30px;
+    form{
+      p{
+        display:inline;
+        color:$orange;
+          >span{
+            line-height: 35px;
+            display:inline-block;
+            width:129px;
+            margin: 5px 0px;
+          }
+          #city{
+            margin-left:130px;
+            width:30px;
+          }
+          #state{
+            width:30px;
+            margin-right:10px;
+          }
+          .bottomLabel{
+            font-size:1.0em;
+            color:$grey;
+            line-height: 11px;
+            text-align: center;
+            width: 45px;
+          }
+          #cCode{
+            margin-left: 125px;
+          }
+          #aCode{
+            margin-left: 15px;
+          }
+          #number{
+            margin: 0px 190px 0px 12px;
+          }
+        }
+        #required{
+          font-size:0.9em;
+          display: block;
+       }
+      input[type="text"],select,textarea{
+        line-height: 24px;
+        width: 370px;
+        margin: 7px 0px;
+      }
+      select{
+        border: 1px solid #ccc;
+      }
+      input[name="city"],input[name="state"]{
+        width: 148px;
+      }
+      input[name="countryCode"],input[name="countryCodeFax"],input[name="areaCode"],input[name="areaCodeFax"]{
+        width:44px;
+        margin-right: 10px;
+      }
+      input[name="number"],input[name="numberFax"]{
+        width: 253px;
+      }
+      textarea{
+        width:370px;
+        height:170px;
+        resize:none;
+      }
+      input[type="submit"]{
+        @include sprite(106px, 30px, -167px,-49px,$hover:'no-hover',$img:$sprite);
+        font-size:0em;
+        margin-right: 130px;
+      }
+      #recaptcha_widget_div{
+        #recaptcha_area{
+          margin-left: 152px;
+        }
+      }
+      label.error{
+        position: absolute;
+        right: 22px;
+        color: red;
+        line-height: 7px;
+      }
+    }
+  }
+}
+// **************************
+.chinese{
+  #contactForm{
+    input[type="submit"]{
+      @include sprite(106px, 30px, -275px,-49px,$hover:'no-hover',$img:$sprite);
+      font-size:0em;
+      }
+    select[name="country"]{
+      width: 367px!important;
+    }
+  }
+}

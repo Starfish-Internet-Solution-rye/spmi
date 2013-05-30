@@ -19,12 +19,17 @@
 				<url_name>corporate-profile</url_name>
 				<link_title>Corporate Profile</link_title>
 				<link_text>Corporate Profile</link_text>
+				<link_tittle language="cn">&#x516C;&#x53F8;&#x7B80;&#x4ECB;</link_tittle>
+				<link_text language="cn">&#x516C;&#x53F8;&#x7B80;&#x4ECB;</link_text>
+				
 				<!-- **************************************************************************************************-->
 					<page>
 						<page_id>about</page_id>
 						<url_name>about-spmi</url_name>
 						<link_title>About SPMI</link_title>
-						<link_text>About SPMI</link_text>
+						<link_text>About SPMIs</link_text>
+						<link_tittle language="cn">&#x5173;&#x4E8E;</link_tittle>
+						<link_text language="cn">&#x5173;&#x4E8E;</link_text>
 					</page>
 				<!-- **************************************************************************************************-->
 					<page>
@@ -32,6 +37,8 @@
 						<url_name>business-philosophy</url_name>
 						<link_title>Business Philisophy</link_title>
 						<link_text>Business Philisophy</link_text>
+						<link_tittle language="cn">&#x7ECF;&#x8425;&#x539F;&#x5219;</link_tittle>
+						<link_text language="cn">&#x7ECF;&#x8425;&#x539F;&#x5219;</link_text>
 					</page>
 		</page>
 		<page>
@@ -39,12 +46,17 @@
 				<url_name>products</url_name>
 				<link_title>Products</link_title>
 				<link_text>Products</link_text>
+				<link_tittle language="cn">&#x4EA7;&#x54C1;&#x548C;&#x7528;&#x9014;</link_tittle>
+				<link_text language="cn">&#x4EA7;&#x54C1;&#x548C;&#x7528;&#x9014;</link_text>
+				
 				<!-- **************************************************************************************************-->
-					<page>
+					<page cms="hide">
 						<page_id>fibers</page_id>
 						<url_name>natural-fibers</url_name>
 						<link_title>Natural Fibers</link_title>
 						<link_text>Natural Fibers</link_text>
+						<link_tittle language="cn">&#x5929;&#x7136;&#x7EA4;&#x7EF4;</link_tittle>
+						<link_text language="cn">&#x5929;&#x7136;&#x7EA4;&#x7EF4;</link_text>
 					</page>
 		</page>
 		<page>
@@ -52,18 +64,34 @@
 				<url_name>applications</url_name>
 				<link_title>Applications</link_title>
 				<link_text>Applications</link_text>
+				<link_tittle language="cn">&#x7528;&#x9014;</link_tittle>
+				<link_text language="cn">&#x7528;&#x9014;</link_text>
 		</page>
 		<page>
 				<page_id>process</page_id>
 				<url_name>process-and-technology</url_name>
 				<link_title>Process and Technology</link_title>
 				<link_text>Process and Technology</link_text>
+				<link_tittle language="cn">&#x5DE5;&#x827A;&#x548C;&#x6280;&#x672F;</link_tittle>
+				<link_text language="cn">&#x5DE5;&#x827A;&#x548C;&#x6280;&#x672F;</link_text>
+			
 				<!-- **************************************************************************************************-->
 					<page>
 						<page_id>advanced</page_id>
 						<url_name>advanced-german-technology</url_name>
 						<link_title>Advanced German Technology</link_title>
 						<link_text>Advanced German Technology</link_text>
+						<link_tittle language="cn">&#x9AD8;&#x7EA7;&#x5FB7;&#x56FD;&#x6280;&#x672F;</link_tittle>
+						<link_text language="cn">&#x9AD8;&#x7EA7;&#x5FB7;&#x56FD;&#x6280;&#x672F;</link_text>
+					</page>
+				<!-- **************************************************************************************************-->
+					<page>
+						<page_id>product</page_id>
+						<url_name>product-specification</url_name>
+						<link_title>Product Specification</link_title>
+						<link_text>Product Specification</link_text>
+						<link_tittle language="cn">&#x4EA7;&#x54C1;&#x89C4;&#x683C;</link_tittle>
+						<link_text language="cn">&#x4EA7;&#x54C1;&#x89C4;&#x683C;</link_text>
 					</page>
 		</page>
 		<page>
@@ -71,6 +99,8 @@
 				<url_name>sustainability</url_name>
 				<link_title>Sustainability</link_title>
 				<link_text>Sustainability</link_text>
+				<link_tittle language="cn">&#x53EF;&#x6301;&#x7EED;&#x6027;</link_tittle>
+				<link_text language="cn">&#x53EF;&#x6301;&#x7EED;&#x6027;</link_text>
 				<!-- **************************************************************************************************-->
 					<page>
 						<page_id>commitment</page_id>
@@ -97,6 +127,7 @@
 			<url_name>contact-us</url_name>
 			<link_title>contact us</link_title>
 			<link_text>Contact Us</link_text>
+			<link_text language="cn">&#x8054;&#x7CFB;&#x6211;&#x4EEC;</link_text>
 		</page>
 	</navigation_group>
 </pages>

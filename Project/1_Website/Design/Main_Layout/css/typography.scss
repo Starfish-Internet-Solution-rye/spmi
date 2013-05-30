@@ -71,7 +71,7 @@ blockquote *:first-child:after { content: "\201D"; }
 
 p {
   margin: 0 0 9px;
-  font-size: 1.2em;
+  font-size: 1.4em;
   line-height: 27px;
   word-wrap: break-word;
 }
@@ -79,7 +79,6 @@ p {
 h1,h2,h3,h4,h5,h6 {
   text-rendering: optimizelegibility;
   font-weight: bold;
-  // color: $grayHeadings;
   margin: 0;
 }
 h1 small,h2 small,h3 small,h4 small,h5 small,h6 small {

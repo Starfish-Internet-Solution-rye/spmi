@@ -1,0 +1,36 @@
+.sprite {
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-color: transparent; }
+
+.lowerPanel {
+  position: relative; }
+  .lowerPanel #advancePointer {
+    margin-left: 168px; }
+  .lowerPanel .upperContent {
+    background-color: #d0d2d3;
+    min-height: 335px;
+    padding: 20px; }
+    .lowerPanel .upperContent img {
+      margin-right: 10px;
+      margin-bottom: 10px; }
+    .lowerPanel .upperContent p {
+      line-height: 50px; }
+
+#productPointer {
+  margin-left: 403px; }
+
+table {
+  margin: 61px 0; }
+  table tr td {
+    font-size: 12px; }
+  table tr td:first-child {
+    padding-right: 10px;
+    color: #0b53a0; }
+
+.chinese #advancePointer {
+  margin-left: 95px; }
+.chinese #productPointer {
+  margin-left: 217px; }

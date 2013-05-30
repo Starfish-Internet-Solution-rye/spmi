@@ -1,4 +1,4 @@
-.sprite, .lowerPanel #aboutContainer .activePointer {
+.sprite, .upperPanel .nivo-directionNav .nivo-prevNav, .upperPanel .nivo-directionNav .nivo-nextNav, .lowerPanel #aboutContainer .activePointer, #businessContainer .activePointer {
   border: none;
   display: inline-block;
   vertical-align: middle;
@@ -8,21 +8,29 @@
 .upperPanel #slider {
   height: 315px;
   width: 900px; }
+.upperPanel .nivo-caption {
+  display: none!important; }
+.upperPanel .nivo-directionNav {
+  display: block!important; }
+  .upperPanel .nivo-directionNav .nivo-prevNav {
+    top: 120px;
+    margin-left: 20px;
+    font-size: 0;
+    width: 19px !important;
+    height: 36px !important;
+    background-position: -119px 0px;
+    background-image: url("/Project/1_Website/Design/Main_Layout/images/sprites/sprite.png"); }
+  .upperPanel .nivo-directionNav .nivo-nextNav {
+    top: 120px;
+    margin-right: 20px;
+    font-size: 0;
+    width: 19px !important;
+    height: 36px !important;
+    background-position: -139px 0px;
+    background-image: url("/Project/1_Website/Design/Main_Layout/images/sprites/sprite.png"); }
 
 .lowerPanel {
   position: relative; }
-  .lowerPanel .opaqueNav {
-    height: 45px;
-    width: 900px;
-    padding: 12px;
-    background-color: #000000;
-    z-index: 10;
-    top: -45px;
-    opacity: 0.8; }
-    .lowerPanel .opaqueNav a {
-      color: white;
-      font-size: 1.8em;
-      margin-right: 34px; }
   .lowerPanel #aboutContainer .activePointer {
     position: absolute;
     top: -20px;
@@ -32,38 +40,82 @@
     background-position: -97px 9px;
     background-image: url("/Project/1_Website/Design/Main_Layout/images/sprites/sprite.png"); }
   .lowerPanel #aboutContainer #aboutPointer {
-    margin-left: 50px; }
-  .lowerPanel #aboutContainer #businessPointer {
-    margin-left: 213px; }
+    margin-left: 89px; }
   .lowerPanel #aboutContainer .upperContent {
     background-color: #d0d2d3;
-    height: 331px;
-    padding: 36px 0px 0px 64px; }
+    min-height: 140px;
+    padding: 35px 50px 35px 50px;
+    overflow: hidden; }
     .lowerPanel #aboutContainer .upperContent > h3 {
       color: #0b53a0;
-      float: left; }
+      float: left;
+      line-height: 32px; }
     .lowerPanel #aboutContainer .upperContent > p {
-      float: right;
-      width: 571px;
-      line-height: 19px; }
-    .lowerPanel #aboutContainer .upperContent #orangeWrap {
+      float: left;
+      margin-left: 20px;
+      width: 510px;
+      line-height: 23px; }
+  .lowerPanel #aboutContainer .lowerContent {
+    width: 900px; }
+    .lowerPanel #aboutContainer .lowerContent .orangeContainer {
       left: 0;
-      padding: 35px 0px 0px 30px;
-      width: 428px;
-      height: 172px;
+      width: 490px;
+      height: 272px;
       background-color: #f47e20;
       bottom: 18px;
-      padding: 35px 35px 30px 30px; }
-      .lowerPanel #aboutContainer .upperContent #orangeWrap > p {
+      padding: 60px 30px 60px 30px; }
+      .lowerPanel #aboutContainer .lowerContent .orangeContainer > p {
         color: white;
-        line-height: 20px; }
-    .lowerPanel #aboutContainer .upperContent .imgHolder {
-      margin-top: 19px;
-      width: 476px;
-      height: 174px;
-      background-image: url("/Project/1_Website/Design/Main_Layout/images/temporaryImages/aboutImage.png");
-      background-size: contain;
-      background-repeat: no-repeat; }
-    .lowerPanel #aboutContainer .upperContent #orangeContent {
+        line-height: 32px; }
+  .lowerPanel #aboutContainer .imgHolder {
+    width: 410px;
+    height: 272px; }
+
+#businessContainer {
+  color: white;
+  background-color: #d0d2d3; }
+  #businessContainer h4 {
+    margin-bottom: 10px; }
+  #businessContainer .activePointer {
+    position: absolute;
+    top: -20px;
+    z-index: 99;
+    width: 20px !important;
+    height: 20px !important;
+    background-position: -97px 9px;
+    background-image: url("/Project/1_Website/Design/Main_Layout/images/sprites/sprite.png"); }
+  #businessContainer #businessPointer {
+    margin-left: 246px; }
+  #businessContainer .upperContent {
+    padding: 0; }
+    #businessContainer .upperContent #visionHolder {
       width: 428px;
-      height: 172px; }
+      height: 172px;
+      background-color: #0b53a0;
+      padding: 35px; }
+      #businessContainer .upperContent #visionHolder h4 {
+        color: #f47e20; }
+      #businessContainer .upperContent #visionHolder p {
+        line-height: 20px; }
+    #businessContainer .upperContent #visionImg {
+      height: 172px;
+      width: 472px; }
+    #businessContainer .upperContent #missionImg {
+      width: 428px;
+      height: 272px; }
+    #businessContainer .upperContent #missionHolder {
+      background-color: #f47e20;
+      width: 472px;
+      height: 272px;
+      padding: 35px; }
+      #businessContainer .upperContent #missionHolder p {
+        line-height: 14px; }
+      #businessContainer .upperContent #missionHolder > h4, #businessContainer .upperContent #missionHolder strong {
+        color: #0b53a0; }
+
+.chinese #aboutPointer {
+  margin-left: 60px!important; }
+.chinese #businessPointer {
+  margin-left: 145px!important; }
+.chinese #missionHolder p {
+  line-height: 25px!important; }

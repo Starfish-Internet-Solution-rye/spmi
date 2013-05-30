@@ -1,5 +1,16 @@
 <applications>
 	
-
+	<application>
+		<application_id>Multilingual</application_id>
+		<floating_url_name>multilingual</floating_url_name>
+		<requires_login>no</requires_login>
+		<has_main_layout>no</has_main_layout>
+				<controller default="true">
+					<controller_id>multilingual</controller_id>
+					<url_name>multilingual</url_name>
+					<link_text>Multilingual</link_text>
+				</controller>
+				
+	</application>
 	
 </applications>
